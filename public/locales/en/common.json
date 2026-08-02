@@ -2,6 +2,14 @@
   "hero": {
     "subtitle": "A community-run portal to find information of the Puerto Princesa City Government"
   },
+  "landmark": {
+    "tooltip": "Know more about the \"Prinsesa ng Baybay\"",
+    "title": "Ang Prinsesa ng Baybay",
+    "subtitle": "The story behind the statue on the Puerto Princesa Baywalk.",
+    "historyHeading": "History",
+    "triviaHeading": "Did You Know?",
+    "sourcesHeading": "Sources"
+  },
   "services": {
     "title": "Services & Information",
     "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",

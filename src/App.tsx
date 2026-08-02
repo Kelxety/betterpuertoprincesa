@@ -10,6 +10,7 @@ import Document from './pages/Document';
 import Government from './pages/Government';
 import Statistics from './pages/Statistics';
 import News from './pages/News';
+import PrinsesaNgBaybay from './pages/PrinsesaNgBaybay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
               />
               <Route path="/statistics" element={<Statistics />} />
               <Route path="/news" element={<News />} />
+              <Route
+                path="/prinsesa-ng-baybay"
+                element={<PrinsesaNgBaybay />}
+              />
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>
