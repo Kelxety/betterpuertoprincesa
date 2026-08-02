@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Puerto Princesa branding: logo, favicon set, `site.webmanifest`, hero graphic (`public/eulalia.svg`)
+- Puerto Princesa branding: logo, favicon set, `site.webmanifest`, hero graphic (`public/princess-of-the-sea.svg`)
 - Homepage sections: "Puerto Princesa at a Glance", weather + city map, hotlines, news, official directory banner
 - `src/pages/Statistics.tsx` and `src/pages/News.tsx` — dedicated `/statistics` and `/news` routes
 - `src/components/home/PuertoPrincesaMap.tsx` — Leaflet map centered on City Hall
