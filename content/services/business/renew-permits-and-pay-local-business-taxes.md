@@ -1,12 +1,12 @@
-# Renew Permits and Pay Local Business Taxes — Lapu-Lapu City
+# Renew Permits and Pay Local Business Taxes — Puerto Princesa City
 
-Use this guide to renew your **Mayor’s/Business Permit** and **Local Business Taxes (LBT)** with the City Government.
+Use this guide to renew your **Mayor's/Business Permit** and **Local Business Taxes (LBT)** with the City Government.
 
 ---
 
 ## Who Must Renew
 
-- All businesses operating in Lapu-Lapu City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
+- All businesses operating in Puerto Princesa City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
 - Renewal applies to **main office and each branch**.
 
 ---
@@ -51,8 +51,8 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 ## Step-by-Step (Walk-In)
 
 1. **Pre-screening / Queuing**
-   - Go to the **Business One-Stop Shop (BOSS)** during the renewal period.
-   - Get your queue number; submit last year’s permit and basic IDs for pre-check.
+   - Go to the **Business One-Stop Shop (BOSS)** at City Hall during the renewal period.
+   - Get your queue number; submit last year's permit and basic IDs for pre-check.
 
 2. **Application & Declaration**
    - Fill out the **Business Renewal Form** and the **Sworn Declaration of Gross Sales/Receipts**.
@@ -77,7 +77,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 
 ## (If Available) Online / Hybrid Filing
 
-- Some transactions may be done via the city’s **online business portal** or **pre-assessment** channels (if announced).
+- Some transactions may be done via the city's **online business portal at [puertoprincesa.ph](https://puertoprincesa.ph)** or **pre-assessment** channels (if announced). Online payment is available for business owners with Landbank accounts.
 - Prepare **scanned PDFs** of your documents (clear, legible; 1 file per requirement).
 - After online assessment, proceed to **payment** (e-payment or onsite) and **permit releasing** per instructions.
 

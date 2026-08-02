@@ -1,5 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 
+const SITE_NAME = 'Puerto Princesa City';
+const SITE_URL = 'https://betterpuertoprincesa.org';
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -7,7 +10,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
 }
 
 export default function SEO({
@@ -17,23 +19,17 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
-  const defaultDescription =
-    import.meta.env.VITE_SITE_DESCRIPTION ||
-    `Official website of ${siteName}. Access government services, information, and resources.`;
+  const defaultTitle = `${SITE_NAME} - Official Government Website`;
+  const defaultDescription = `Official website of ${SITE_NAME}. Access government services, information, and resources.`;
   const defaultKeywords =
-    import.meta.env.VITE_SITE_KEYWORDS ||
-    'government, local government, services, public services, civic services';
+    'government, local government, services, public services, civic services, Puerto Princesa, Palawan';
 
-  const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : defaultTitle;
   const fullDescription = description || defaultDescription;
   const fullKeywords = keywords || defaultKeywords;
-  const fullUrl = url || import.meta.env.VITE_WEBSITE_URL || '';
-  const fullImage =
-    image || import.meta.env.VITE_OG_IMAGE_URL || `${fullUrl}/og-image.jpg`;
-  const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
+  const fullUrl = url || SITE_URL;
+  const fullImage = image || `${SITE_URL}/og-image.jpg`;
 
   return (
     <Helmet>
@@ -41,7 +37,7 @@ export default function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
-      <meta name="author" content={siteName} />
+      <meta name="author" content={SITE_NAME} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
@@ -52,7 +48,7 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
@@ -61,9 +57,6 @@ export default function SEO({
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={fullDescription} />
       <meta property="twitter:image" content={fullImage} />
-      {twitterHandle && (
-        <meta property="twitter:site" content={twitterHandle} />
-      )}
 
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,26 +65,6 @@ export default function SEO({
 
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
-
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -6,52 +6,50 @@ Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's
 
 # Your Mayor and Vice Mayor
 
-The **Mayor** is the chief executive official of the **Local Government Unit of {GOVERNMENT_NAME}**. The Mayor is elected by residents during the **Philippine National and Local Elections**, which are held every three years.
+The **Mayor** is the chief executive official of the **Local Government Unit of Puerto Princesa City**. The Mayor is elected by residents during the **Philippine National and Local Elections**, which are held every three years.
 
-The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Panlungsod / Sangguniang Bayan (City or Municipal Council)**.
+The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Panlungsod (City Council)**.
 
-The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing city or municipal services, and ensuring that public services are effectively delivered to residents.
+The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing city services, and ensuring that public services are effectively delivered to residents.
 
-The **current Mayor is {MAYOR}.**
+The **current Mayor is Lucilo R. Bayron.**
 
-**Mayor {MAYOR}** was elected as **Mayor of {GOVERNMENT_NAME}** during the **{YEAR_ELECTED} National and Local Elections**.
+**Mayor Lucilo R. Bayron** was elected as **Mayor of Puerto Princesa City** during the **2025 National and Local Elections**.
 
 ---
 
-## Mayor of {GOVERNMENT_NAME}
+## Mayor of Puerto Princesa City
 
-**Image Caption**
-
-Mayor of **{GOVERNMENT_NAME}**, **{MAYOR}**
+Mayor of **Puerto Princesa City**, **Lucilo R. Bayron**
 
 ---
 
 ### Biography of the Mayor
 
-Mayor **{MAYOR}** has been serving the people of **{GOVERNMENT_NAME}** since **{YEAR_ELECTED}**.
+Mayor **Lucilo R. Bayron** has been serving the people of **Puerto Princesa City** since **2025**.
 
-Mayor **{MAYOR}** is known for championing initiatives related to:
+Mayor **Bayron** is known for championing initiatives related to:
 
 - Local economic development
 - Public health and social services
 - Infrastructure and urban development
 - Community empowerment and participation
 
-Outside of official duties, Mayor **{MAYOR}** works closely with barangay leaders, civic organizations, and private sector partners to support programs that benefit the community.
+Outside of official duties, Mayor **Bayron** works closely with barangay leaders, civic organizations, and private sector partners to support programs that benefit the community.
 
 ---
 
 ### Mayor's Community Assistance Program
 
-During the current term, Mayor **{MAYOR}** supports several initiatives aimed at improving the welfare of residents under the theme **"[PROGRAM THEME]"**.
+During the current term, Mayor **Bayron** supports several initiatives aimed at improving the welfare of residents under the **Mapagkalingang Programa (Caring Program)**.
 
-Programs supported include:
+Programs supported include cash and welfare assistance for:
 
-- **[PROGRAM NAME 1]** – Supporting education and youth development
-- **[PROGRAM NAME 2]** – Providing livelihood assistance to families
-- **[PROGRAM NAME 3]** – Strengthening disaster preparedness and community resilience
+- **Students** – educational cash assistance
+- **Senior citizens and PWDs** – welfare and medicine assistance
+- **Barangay tanods, teachers, and non-teaching staff** – service incentives
 
-You can read more about these initiatives on the **Mayor's Community Programs page**.
+You can read more about these initiatives on the [City Government of Puerto Princesa's Mayor's Initiatives page](https://puertoprincesa.ph/may/).
 
 ---
 
@@ -61,13 +59,13 @@ You can read more about these initiatives on the **Mayor's Community Programs pa
 
 ## Biography of the Vice Mayor
 
-**{VICE_MAYOR}** currently serves as the **Vice Mayor of {GOVERNMENT_NAME}**.
+**Peter Q. Maristela** currently serves as the **Vice Mayor of Puerto Princesa City**.
 
-The Vice Mayor presides over the **Sangguniang Panlungsod / Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
+The Vice Mayor presides over the **Sangguniang Panlungsod**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
 
-Vice Mayor **{VICE_MAYOR}** was elected during the **{YEAR_ELECTED} National and Local Elections**.
+Vice Mayor **Maristela** was elected during the **2025 National and Local Elections**.
 
-Vice Mayor **{VICE_MAYOR}** supports initiatives focused on:
+Vice Mayor **Maristela** supports initiatives focused on:
 
 - community welfare
 - legislative development
@@ -77,11 +75,11 @@ Vice Mayor **{VICE_MAYOR}** supports initiatives focused on:
 
 # About the Office of the Vice Mayor
 
-The **Vice Mayor** performs legislative functions and presides over meetings of the **City or Municipal Council**.
+The **Vice Mayor** performs legislative functions and presides over meetings of the **Sangguniang Panlungsod**.
 
 When the Mayor is unable to perform official duties due to travel, illness, or other official commitments, the **Vice Mayor assumes responsibilities as Acting Mayor**, in accordance with Philippine local government laws.
 
-The Vice Mayor may also represent the city or municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
+The Vice Mayor may also represent the city in official functions, civic ceremonies, and community events when designated by the Mayor.
 
 ---
 
@@ -115,13 +113,13 @@ Stay updated with the latest activities of the Mayor, including:
 - public consultations
 - official ceremonies
 
-Updates will be posted regularly on the **official website and social media channels of {GOVERNMENT_NAME}**.
+Updates will be posted regularly on the **official website and social media channels of Puerto Princesa City**.
 
 ---
 
 # Mayoral History and Key Facts
 
-The Office of the Mayor plays a vital role in guiding the development of **{GOVERNMENT_NAME}**.
+The Office of the Mayor plays a vital role in guiding the development of **Puerto Princesa City**.
 
 Key responsibilities include:
 
@@ -130,13 +128,13 @@ Key responsibilities include:
 - managing emergency and disaster response
 - representing the LGU in regional and national engagements
 
-A historical list of previous mayors and key milestones of the city or municipality can be found on the **Mayoral History page**.
+A historical list of previous mayors and key milestones of the city can be found on the **Mayoral History page**.
 
 ---
 
 # Other Historic Roles in the LGU
 
-The local government also recognizes other important civic and ceremonial roles that have contributed to the history of **{GOVERNMENT_NAME}**, including:
+The local government also recognizes other important civic and ceremonial roles that have contributed to the history of **Puerto Princesa City**, including:
 
 - former municipal presidents
 - distinguished public servants
@@ -149,17 +147,17 @@ These roles reflect the legacy of leadership and public service within the commu
 # Contact the Mayor's Office
 
 **Office of the Mayor**
-City/Municipal Hall of **{GOVERNMENT_NAME}**
+City Hall of **Puerto Princesa City**
 
 **Address:**
-[STREET ADDRESS]
-[CITY / PROVINCE / POSTAL CODE]
+New City Hall Complex, Sta. Monica Heights
+Barangay Sta. Monica, Puerto Princesa City, Palawan 5300
 
 **Telephone:**
-[PHONE NUMBER]
+(048) 717-8000
 
 **Email:**
-[EMAIL ADDRESS]
+info@puertoprincesa.ph
 
 **Website:**
-[OFFICIAL WEBSITE URL]
+[puertoprincesa.ph](https://puertoprincesa.ph)

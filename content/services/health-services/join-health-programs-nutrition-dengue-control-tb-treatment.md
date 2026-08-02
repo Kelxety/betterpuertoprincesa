@@ -1,4 +1,4 @@
-# Join Health Programs — Lapu-Lapu City (Nutrition, Dengue Control, TB Treatment)
+# Join Health Programs — Puerto Princesa City (Nutrition, Dengue Control, TB Treatment)
 
 Below are city-led and national programs you can join through your **Barangay Health Center** and the **City Health Office (CHO)**.
 
@@ -6,7 +6,7 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 1) Nutrition Programs
 
-**What’s offered**
+**What's offered**
 
 - Supplementary feeding for day-care children.
 - Community nutrition activities such as breastfeeding promotion, growth monitoring, and health education.
@@ -14,7 +14,7 @@ Below are city-led and national programs you can join through your **Barangay He
 
 **Who can join**
 
-- Day-care children and families identified by barangays or CSWD.
+- Day-care children and families identified by barangays or the City Social Welfare and Development Office (CSWDO).
 - Residents may also take part in open city nutrition events.
 
 **How to join**
@@ -28,10 +28,10 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 2) Dengue Control Programs
 
-**What’s offered**
+**What's offered**
 
-- Community clean-up drives under the **ABKD (Aksyon Barangay Kontra Dengue)** program.
-- Daily “4 o’clock habit” — searching and destroying mosquito breeding sites.
+- Community clean-up drives under the **4S Kontra Dengue** strategy.
+- Daily "4 o'clock habit" — searching and destroying mosquito breeding sites.
 - Misting, fogging, and entomological surveys led by the CHO.
 - Information campaigns during Dengue Awareness Month and rainy season.
 
@@ -46,14 +46,14 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 3) TB Treatment (NTP TB-DOTS)
 
-**What’s offered**
+**What's offered**
 
 - Free consultations, diagnostic tests, and full course of anti-TB medicines under the **National Tuberculosis Program (NTP)**.
 - Supervised treatment through the **Directly Observed Therapy Short-course (DOTS)** approach.
 
 **Where**
 
-- Lapu-Lapu City Health Office (DOTS facility) and affiliated barangay health centers.
+- Puerto Princesa City Health Office (DOTS facility) and affiliated barangay health centers.
 
 **How to join**
 
@@ -68,7 +68,7 @@ Below are city-led and national programs you can join through your **Barangay He
 ## Contact & Updates
 
 - **Barangay Health Centers** — First point of contact for nutrition, dengue, and TB programs.
-- **Lapu-Lapu City Health Office (CHO)** — Main office for program schedules and services.
+- **Puerto Princesa City Health Office (CHO)** — Unit 9, Mercado de San Miguel, National Highway, Barangay San Miguel; (048) 717-8000. Main office for program schedules and services.
 - **City Information Office** — Posts updates on city-wide campaigns and health events.
 
 ---
@@ -77,5 +77,5 @@ Below are city-led and national programs you can join through your **Barangay He
 
 - Bring a **valid ID** and your **barangay health record** (if you already have one).
 - For TB symptoms (cough for 2 weeks or more, weight loss, night sweats), seek screening immediately.
-- Join community clean-up drives and practice the 4 o’clock habit to prevent dengue.
-- Attend barangay nutrition events and feeding programs for your children’s growth and wellness.
+- Join community clean-up drives and practice the 4 o'clock habit to prevent dengue.
+- Attend barangay nutrition events and feeding programs for your children's growth and wellness.

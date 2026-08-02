@@ -214,7 +214,7 @@ export const TableWithToggle = ({
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          <Table size={16} />
+          <Table className="h-4 w-4" strokeWidth={2.5} />
           Table
         </button>
         <button
@@ -225,7 +225,7 @@ export const TableWithToggle = ({
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
-          <List size={16} />
+          <List className="h-4 w-4" strokeWidth={2.5} />
           List
         </button>
       </div>

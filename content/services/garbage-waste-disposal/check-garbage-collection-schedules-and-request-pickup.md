@@ -1,6 +1,6 @@
-# Check Garbage Collection Schedules and Request Pickup — Lapu-Lapu City
+# Check Garbage Collection Schedules and Request Pickup — Puerto Princesa City
 
-The City Government of Lapu-Lapu manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
+The City Government of Puerto Princesa manages **regular garbage collection** through the **Office of the City Environment and Natural Resources Officer (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
 
 ---
 
@@ -43,10 +43,10 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 
 ## 3) Contact Information
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: via **City Information Office** FB page
+- **Office of the City Environment and Natural Resources Officer (CENRO)**  
+  Unit 19, Mercado de San Miguel, National Highway, Brgy. San Miguel, Puerto Princesa City 5300  
+  Phone: (048) 717-8000 (City trunkline, ask for CENRO)  
+  Updates: via **City Information Office** FB page ([facebook.com/cio.puertoprincesa](https://www.facebook.com/cio.puertoprincesa))
 
 - **Barangay Halls** — each barangay has an Environment/ Solid Waste desk for local schedules and pickup requests.
 
@@ -71,4 +71,4 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 
 ### Key Reminder
 
-Following your barangay’s **garbage collection schedule** and properly requesting **special pickups** keeps the city clean and prevents flooding, pests, and health risks.
+Following your barangay's **garbage collection schedule** and properly requesting **special pickups** keeps Puerto Princesa clean and prevents flooding, pests, and health risks.
