@@ -12,7 +12,11 @@ export default function Hero() {
       >
         <div className="relative h-full">
           <div className="absolute left-3/4 -translate-x-1/2 top-8 bottom-0 hidden lg:block">
-            <img src="/eulalia.svg" alt="" className="h-full w-auto" />
+            <img
+              src="/princess-of-the-sea.svg"
+              alt=""
+              className="h-full w-auto"
+            />
           </div>
         </div>
       </div>
