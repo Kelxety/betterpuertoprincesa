@@ -1,6 +1,6 @@
-# 📝 Content Writing Guide for Local Government Websites
+# Content Writing Guide for BetterPuertoPrincesa.org
 
-This guide helps content contributors create clear, helpful, and accessible content for local government websites.
+This guide helps content contributors create clear, helpful, and accessible content for the Puerto Princesa City civic portal.
 
 ## 🎯 Content Principles
 

@@ -1,10 +1,10 @@
-# 🚀 Deployment Guide for Local Government Websites
+# Deployment Guide for BetterPuertoPrincesa.org
 
-This guide covers deploying your local government website to various platforms, with a focus on Vercel (recommended) and other alternatives.
+This guide covers deploying the site to various platforms. It ships with a `vercel.json` already configured, so Vercel (recommended) is the path of least resistance; alternatives are documented below for reference.
 
-## 🌟 Recommended: Deploy to Vercel
+## Recommended: Deploy to Vercel
 
-Vercel is the recommended platform for local government websites because it offers:
+Vercel is the recommended platform for this project because it offers:
 
 - Free hosting for public projects
 - Automatic deployments from GitHub
@@ -227,7 +227,7 @@ cd terraform
 terraform apply
 ```
 
-Terraform will automatically detect changed files and update only what's necessary.
+Terraform will automatically detect changed files and update only what's necessary. See `terraform/terraform.tfvars.example` for all configurable variables.
 
 #### What Gets Created
 
@@ -310,7 +310,7 @@ cd terraform
 terraform destroy
 ```
 
-**Note**: See [terraform/README.md](terraform/README.md) for detailed documentation.
+**Note**: See `terraform/main.tf`, `variables.tf`, and `outputs.tf` for the full resource definitions.
 
 ## 🛡️ Security Considerations
 

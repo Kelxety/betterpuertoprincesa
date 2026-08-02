@@ -1,18 +1,29 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import { Tooltip } from '../ui/Tooltip';
 
 export default function Hero() {
   const { t } = useTranslation();
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12 md:py-24">
-      <div
-        className="pointer-events-none absolute inset-0 container mx-auto px-4"
-        aria-hidden="true"
-      >
+      <div className="pointer-events-none absolute inset-0 container mx-auto px-4">
         <div className="relative h-full">
-          <div className="absolute left-3/4 -translate-x-1/2 top-8 bottom-0 hidden lg:block">
-            <img src="/eulalia.svg" alt="" className="h-full w-auto" />
+          <div className="pointer-events-auto absolute left-3/4 -translate-x-1/2 top-8 bottom-0 hidden lg:block">
+            <Tooltip label={t('landmark.tooltip')} position="left">
+              <Link
+                to="/prinsesa-ng-baybay"
+                aria-label={t('landmark.tooltip')}
+                className="block h-full"
+              >
+                <img
+                  src="/prinsesa-ng-baybay.svg"
+                  alt=""
+                  className="h-full w-auto"
+                />
+              </Link>
+            </Tooltip>
           </div>
         </div>
       </div>

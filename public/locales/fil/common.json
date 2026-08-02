@@ -2,6 +2,14 @@
   "hero": {
     "subtitle": "Isang portal na pinapatakbo ng komunidad para sa impormasyon tungkol sa Pamahalaang Lungsod ng Puerto Princesa"
   },
+  "landmark": {
+    "tooltip": "Alamin pa ang tungkol sa \"Prinsesa ng Baybay\"",
+    "title": "Ang Prinsesa ng Baybay",
+    "subtitle": "Ang kwento sa likod ng estatwa sa Puerto Princesa Baywalk.",
+    "historyHeading": "Kasaysayan",
+    "triviaHeading": "Alam Ba Ninyo?",
+    "sourcesHeading": "Mga Pinagmulan"
+  },
   "services": {
     "title": "Mga Serbisyo at Impormasyon",
     "description": "Mabilis at madaling ma-access ang mga opisyal na serbisyo ng pamahalaan. Hanapin ang kailangan mo para sa pagkamamamayan, negosyo, edukasyon, at marami pa.",
