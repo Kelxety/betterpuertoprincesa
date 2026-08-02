@@ -33,36 +33,15 @@ Vercel is the recommended platform for local government websites because it offe
 4. **Import your repository**
 5. **Configure project settings**
 
-### Step 3: Configure Environment Variables
+### Step 3: Deploy
 
-In your Vercel project dashboard:
-
-1. **Go to Settings → Environment Variables**
-2. **Add the following variables:**
-
-```env
-VITE_GOVERNMENT_NAME=Puerto Princesa City
-VITE_GOVERNMENT_TYPE=City
-VITE_REGION=Region IV-B
-VITE_PROVINCE=Palawan
-VITE_WEBSITE_URL=https://your-project.vercel.app
-VITE_CONTACT_EMAIL=info@puertoprincesa.ph/
-VITE_CONTACT_PHONE=(048) 717 8000
-VITE_FACEBOOK_URL=https://facebook.com/your-government
-VITE_TWITTER_URL=https://twitter.com/your-government
-VITE_INSTAGRAM_URL=https://instagram.com/your-government
-VITE_YOUTUBE_URL=https://youtube.com/your-government
-VITE_SITE_DESCRIPTION=Official website of Puerto Princesa City/Municipality
-VITE_SITE_KEYWORDS=government, local government, services, your city
-```
-
-### Step 4: Deploy
+No environment variables are required — branding, contact info, and metadata are hardcoded for Puerto Princesa City in `src/components/SEO.tsx` and the layout components.
 
 1. **Click "Deploy"**
 2. **Wait for deployment to complete** (usually 2-3 minutes)
 3. **Your website will be available at** `https://your-project.vercel.app`
 
-### Step 5: Custom Domain (Optional)
+### Step 4: Custom Domain (Optional)
 
 1. **Go to Settings → Domains**
 2. **Add your custom domain** (e.g., `puertoprincesa.ph/`)
@@ -136,10 +115,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          VITE_GOVERNMENT_NAME: ${{ secrets.GOVERNMENT_NAME }}
-          VITE_GOVERNMENT_TYPE: ${{ secrets.GOVERNMENT_TYPE }}
-          # Add other environment variables
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -337,35 +312,6 @@ terraform destroy
 
 **Note**: See [terraform/README.md](terraform/README.md) for detailed documentation.
 
-## 🔧 Environment-Specific Configurations
-
-### Development Environment
-
-```env
-# .env.local
-VITE_GOVERNMENT_NAME=Puerto Princesa City (Development)
-VITE_WEBSITE_URL=http://localhost:5173
-VITE_CONTACT_EMAIL=dev@puertoprincesa.ph/
-```
-
-### Staging Environment
-
-```env
-# .env.staging
-VITE_GOVERNMENT_NAME=Puerto Princesa City (Staging)
-VITE_WEBSITE_URL=https://staging.puertoprincesa.ph/
-VITE_CONTACT_EMAIL=staging@puertoprincesa.ph/
-```
-
-### Production Environment
-
-```env
-# .env.production
-VITE_GOVERNMENT_NAME=Puerto Princesa City
-VITE_WEBSITE_URL=https://puertoprincesa.ph/
-VITE_CONTACT_EMAIL=info@puertoprincesa.ph/
-```
-
 ## 🛡️ Security Considerations
 
 ### Environment Variables
@@ -472,12 +418,6 @@ rm -rf node_modules package-lock.json
 npm install
 npm run build
 ```
-
-#### Environment Variables Not Loading
-
-- Check variable names (must start with `VITE_`)
-- Verify values in deployment platform
-- Restart deployment after changes
 
 #### Routing Issues
 

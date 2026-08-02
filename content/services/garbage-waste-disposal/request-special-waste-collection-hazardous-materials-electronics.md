@@ -1,6 +1,6 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Lapu-Lapu City
+# Request Special Collection Services for Hazardous Waste & E-Waste — Puerto Princesa City
 
-Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
+Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The Office of the City Environment and Natural Resources Officer (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
 
 ---
 
@@ -43,10 +43,10 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
 
 ## 4) Contact Information
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+- **Office of the City Environment and Natural Resources Officer (CENRO)**  
+  Unit 19, Mercado de San Miguel, National Highway, Brgy. San Miguel, Puerto Princesa City 5300  
+  Phone: (048) 717-8000 (City trunkline, ask for CENRO)  
+  Updates: [City Government of Puerto Princesa Facebook Page](https://www.facebook.com/puertoprincesaph)
 
 - **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
 

@@ -15,9 +15,11 @@ import SEO from '../components/SEO';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Government: React.FC = () => {
   const { category } = useParams();
+  const { t } = useTranslation('common');
   const [categoryIndex, setCategoryIndex] = useState<CategoryIndex>({
     layout: 'list',
     pages: [],
@@ -49,27 +51,32 @@ const Government: React.FC = () => {
       <>
         <SEO
           title="Services"
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          description="All services provided by the Puerto Princesa City government. Find what you need for citizenship, business, education, and more."
           keywords="government services, public services, local government, civic services"
         />
         <GovernmentActivitySection
-          title={`All local government services`}
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          title="All local government services"
+          description="All services provided by the Puerto Princesa City government. Find what you need for citizenship, business, education, and more."
+          showViewAll={false}
         />
       </>
     );
   }
   if (!categoryData) {
     return (
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" />
-        <Banner
-          type="error"
-          title="Category not found"
-          description="The category you are looking for does not exist."
-          icon
-        />
-      </Section>
+      <>
+        <Section className="!py-4 !bg-gray-50">
+          <Breadcrumbs />
+        </Section>
+        <Section className="!pt-8 mb-12">
+          <Banner
+            type="error"
+            title={t('services.categoryNotFoundTitle')}
+            description={t('services.categoryNotFoundDescription')}
+            icon
+          />
+        </Section>
+      </>
     );
   }
 
@@ -80,15 +87,17 @@ const Government: React.FC = () => {
         description={categoryData.description}
         keywords={`${categoryData.category}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" />
+      <Section className="!py-4 !bg-gray-50">
+        <Breadcrumbs />
+      </Section>
+      <Section className="!pt-8 mb-12">
         <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
         <Heading>{categoryData.category || category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
 
         {loading ? (
           <div className="flex justify-center items-center p-8">
-            <Text>Loading services...</Text>
+            <Text>{t('services.loading')}</Text>
           </div>
         ) : (
           <>

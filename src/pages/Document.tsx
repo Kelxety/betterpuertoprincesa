@@ -14,6 +14,7 @@ import {
 import { createMarkdownComponents } from '../lib/markdownComponents';
 import { Card, CardContent, CardHeader } from '@bettergov/kapwa/card';
 import { getTypographyTheme } from '../lib/typographyThemes';
+import { useTranslation } from 'react-i18next';
 import {
   serviceCategories,
   governmentCategories,
@@ -34,6 +35,7 @@ export default function Document({
   categoryType,
 }: DocumentProps) {
   const { documentSlug, category } = useParams();
+  const { t } = useTranslation('common');
   const [markdownContent, setMarkdownContent] =
     useState<MarkdownContent | null>(null);
   const [nestedIndex, setNestedIndex] = useState<CategoryIndex | null>(null);
@@ -45,7 +47,7 @@ export default function Document({
   );
 
   const [breadcrumbs, setBreadcrumbs] = useState([
-    { label: 'Home', href: '/' },
+    { label: t('navbar.home'), href: '/' },
   ]);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export default function Document({
           const index = await getCategorySubcategories(documentSlug);
           setNestedIndex(index);
           setBreadcrumbs([
-            { label: 'Home', href: '/' },
+            { label: t('navbar.home'), href: '/' },
             { label: sectionLabel, href: sectionHref },
             {
               label: categoryData?.category ?? category,
@@ -95,7 +97,7 @@ export default function Document({
         setMarkdownContent(content);
 
         setBreadcrumbs([
-          { label: 'Home', href: '/' },
+          { label: t('navbar.home'), href: '/' },
           { label: sectionLabel, href: sectionHref },
           {
             label: categoryData?.category ?? category,
@@ -116,27 +118,31 @@ export default function Document({
     };
 
     loadContent();
-  }, [documentSlug, category, categoryType]);
+  }, [documentSlug, category, categoryType, t]);
 
   if (loading) {
     return (
       <Section className="p-3 mb-12">
-        <Banner type="info" description="Loading document..." />
+        <Banner type="info" description={t('document.loading')} />
       </Section>
     );
   }
 
   if (error) {
     return (
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" items={breadcrumbs} />
-        <Banner
-          type="error"
-          title="Document Not Found"
-          description={error}
-          icon
-        />
-      </Section>
+      <>
+        <Section className="!py-4 !bg-gray-50">
+          <Breadcrumbs items={breadcrumbs} />
+        </Section>
+        <Section className="!pt-8 mb-12">
+          <Banner
+            type="error"
+            title={t('document.notFoundTitle')}
+            description={error}
+            icon
+          />
+        </Section>
+      </>
     );
   }
 
@@ -148,8 +154,10 @@ export default function Document({
           title={documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
-        <Section className="p-3 mb-12">
-          <Breadcrumbs className="mb-8" items={breadcrumbs} />
+        <Section className="!py-4 !bg-gray-50">
+          <Breadcrumbs items={breadcrumbs} />
+        </Section>
+        <Section className="!pt-8 mb-12">
           {nestedIndex.title && (
             <Heading level={2}>{nestedIndex.title}</Heading>
           )}
@@ -212,8 +220,10 @@ export default function Document({
         }
         keywords={`${documentSlug}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" items={breadcrumbs} />
+      <Section className="!py-4 !bg-gray-50">
+        <Breadcrumbs items={breadcrumbs} />
+      </Section>
+      <Section className="!pt-8 mb-12">
         <Card className="mb-8 markdown-content">
           <CardHeader>
             {markdownContent.description && (

@@ -114,6 +114,15 @@
   --font-mono: var(--font-kapwa-mono);
 }
 
+/* Constrain .container to match reference layout (Tailwind v4's default
+   container utility has no max-width cap / generous padding, which reads
+   as edge-to-edge/bulky on wide screens) */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

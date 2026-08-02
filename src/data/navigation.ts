@@ -13,6 +13,7 @@ interface Category {
 }
 
 export const mainNavigation: NavigationItem[] = [
+  { label: 'Home', href: '/' },
   {
     label: 'Services',
     href: '/services',
@@ -24,34 +25,39 @@ export const mainNavigation: NavigationItem[] = [
   {
     label: 'Government',
     href: '/government/departments',
+    children: [
+      { label: 'Executive', href: '/government/departments/executive' },
+      { label: 'Legislative', href: '/government/departments/legislative' },
+    ],
   },
+  { label: 'Statistics', href: '/statistics' },
+  { label: 'News', href: '/news' },
 ];
 
 export const footerNavigation = {
   mainSections: [
     {
-      title: 'About',
-      links: [
-        { label: 'About the Portal', href: '/about' },
-        // { label: 'Privacy Policy', href: '/privacy' },
-        // { label: 'Terms of Use', href: '/terms' },
-        { label: 'Accessibility', href: '/accessibility' },
-        { label: 'Contact Us', href: '/about' },
-        { label: 'Community Discord', href: '/discord' },
-      ],
-    },
-    {
       title: 'Services',
       links: [
         { label: 'All Services', href: '/services' },
         ...(servicesData.categories as Category[])
-          .slice(0, 6)
+          .slice(0, 5)
           .map(category => ({
             label: category.category,
             href: `/services/${category.slug}`,
           })),
-        { label: 'Hotlines', href: '/philippines/hotlines' },
-        { label: 'Holidays', href: '/philippines/holidays' },
+      ],
+    },
+    {
+      title: 'Puerto Princesa',
+      links: [
+        {
+          label: "Citizen's Charter",
+          href: 'https://puertoprincesa.ph/citizens-charter/',
+        },
+        { label: 'City Government Website', href: 'https://puertoprincesa.ph' },
+        { label: 'City Statistics', href: '/statistics' },
+        { label: 'News & Updates', href: '/news' },
       ],
     },
     {
@@ -71,9 +77,14 @@ export const footerNavigation = {
     },
   ],
   socialLinks: [
-    { label: 'Facebook', href: 'https://facebook.com/govph' },
-    { label: 'Twitter', href: 'https://twitter.com/govph' },
-    { label: 'Instagram', href: 'https://instagram.com/govph' },
-    { label: 'YouTube', href: 'https://youtube.com/govph' },
-  ],
+    {
+      label: 'Facebook',
+      href: 'https://facebook.com/betterpuertoprincesa.org',
+    },
+    {
+      label: 'GitHub',
+      href: 'https://github.com/Kelxety/betterpuertoprincesa',
+    },
+    { label: 'Discord', href: null },
+  ] as { label: string; href: string | null }[],
 };

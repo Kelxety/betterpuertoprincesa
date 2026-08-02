@@ -1,4 +1,4 @@
-# Access Maternal Care & Child Immunization — Lapu-Lapu City
+# Access Maternal Care & Child Immunization — Puerto Princesa City
 
 The City Health Office (CHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
 
@@ -11,7 +11,7 @@ The City Health Office (CHO) and barangay health centers provide **prenatal care
 | Prenatal check-ups (by midwife/nurse; physician referral as needed) | **Barangay Health Centers** | Mon–Fri (typical clinic hours; varies by center)                       | Prenatal record (issued/updated at first visit) | **Free**                                                   |
 | Family Planning counseling & methods                                | **Barangay Health Centers** | Mon–Fri **8:00 AM–4:00 PM**; Sat **8:00 AM–1:00 PM** (except holidays) | Personal appearance for counseling              | **Free** counseling (methods per DOH program availability) |
 
-**Tip:** Bring any previous prenatal card/records and a valid ID. If you’re new, staff will register you and issue the needed record at the health center.
+**Tip:** Bring any previous prenatal card/records and a valid ID. If you're new, staff will register you and issue the needed record at the health center.
 
 ---
 
@@ -38,12 +38,12 @@ Routine childhood vaccines are provided **free** under the Expanded Program on I
 
 ## Notes & Extras
 
-- **Medical consultations** at health centers are **free** (Mon–Fri, 8:00 AM–5:00 PM; center schedules apply). Useful if you need a doctor’s assessment alongside prenatal care.
-- The CHO and health centers also run **mother’s classes** and promote **facility-based delivery**; ask your midwife for schedules.
+- **Medical consultations** at health centers are **free** (Mon–Fri, 8:00 AM–5:00 PM; center schedules apply). Useful if you need a doctor's assessment alongside prenatal care.
+- The CHO and health centers also run **mother's classes** and promote **facility-based delivery**; ask your midwife for schedules.
 
 ---
 
 **References**
 
-- [Lapu-Lapu City Government – Services](https://lapulapucity.gov.ph)
+- [City Government of Puerto Princesa – Office of the City Health Officer](https://puertoprincesa.ph/office-of-the-city-health-officer/)
 - [Department of Health – Expanded Program on Immunization](https://doh.gov.ph)
