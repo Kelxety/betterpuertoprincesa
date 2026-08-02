@@ -1,12 +1,15 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/layout/Navbar';
+import InfoBar from './components/layout/InfoBar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import Statistics from './pages/Statistics';
+import News from './pages/News';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,6 +19,7 @@ function App() {
         <NuqsAdapter>
           <div className="min-h-screen flex flex-col">
             <Navbar />
+            <InfoBar />
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -31,6 +35,8 @@ function App() {
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}
               />
+              <Route path="/statistics" element={<Statistics />} />
+              <Route path="/news" element={<News />} />
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>

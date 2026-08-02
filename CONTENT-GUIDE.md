@@ -260,46 +260,11 @@ Use clear, descriptive headings:
 - Fees and costs
 - Processing times
 
-## 🔧 Dynamic Content with Placeholders
+## 🔧 Updating Official Names and Dates
 
-Markdown pages can use `{PLACEHOLDER}` tokens for values that change between LGUs (official names, dates, etc.). Tokens are replaced at load time using a companion JSON file with the same slug.
+This site is built specifically for Puerto Princesa City — there is no `{PLACEHOLDER}` templating system. Write real values (the mayor's actual name, the current year, etc.) directly into the markdown.
 
-### How It Works
-
-| File             | Purpose                                                     |
-| ---------------- | ----------------------------------------------------------- |
-| `executive.md`   | Markdown content with `{MAYOR}`, `{GOVERNMENT_NAME}` tokens |
-| `executive.json` | Key-value pairs that supply the token values                |
-
-Resolution order:
-
-1. Value from the companion `.json` file
-2. `VITE_<KEY>` environment variable
-3. Token left unchanged (e.g. `{MAYOR}`)
-
-### When to Use Placeholders
-
-- Official names (mayor, vice mayor, department heads)
-- LGU name and address
-- Dates and election years
-- Any value that differs per deployment
-
-### When NOT to Use Placeholders
-
-- Narrative paragraphs and descriptions — write these directly
-- Content that changes frequently — update the markdown instead
-- Values that don't vary across deployments
-
-### Keeping JSON Files Updated
-
-When officials change, **only update the JSON file** — no need to touch the markdown:
-
-```json
-{
-  "MAYOR": "New Mayor Name",
-  "YEAR_ELECTED": "2025"
-}
-```
+When officials change (e.g. after an election), **edit the markdown files directly** — search the `content/` directory for the outgoing official's name and replace it with the incoming one.
 
 ## 🌐 Multilingual Content
 

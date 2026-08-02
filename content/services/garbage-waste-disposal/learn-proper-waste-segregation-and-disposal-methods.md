@@ -1,6 +1,6 @@
-# Guidelines for Proper Waste Segregation and Disposal — Lapu-Lapu City
+# Guidelines for Proper Waste Segregation and Disposal — Puerto Princesa City
 
-Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
+Proper waste segregation is **mandatory** in Puerto Princesa City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
 
 ---
 
@@ -61,13 +61,13 @@ Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act
 
 ## Contact for Support
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (ask for CENRO)  
-  Updates via: [Lapu-Lapu City Information Office Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+- **Office of the City Environment and Natural Resources Officer (CENRO)**  
+  Unit 19, Mercado de San Miguel, National Highway, Brgy. San Miguel, Puerto Princesa City 5300  
+  Phone: (048) 717-8000 (ask for CENRO)  
+  Updates via: [Puerto Princesa City Information Office Facebook Page](https://www.facebook.com/cio.puertoprincesa)
 
 ---
 
 ### Key Reminder
 
-✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Lapu-Lapu City safe and sustainable.
+✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Puerto Princesa City safe and sustainable.

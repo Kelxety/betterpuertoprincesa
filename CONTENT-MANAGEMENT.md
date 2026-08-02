@@ -182,23 +182,9 @@ pages:
 
 5. Save the changes
 
-### Using Dynamic Data in Department Pages
+### Updating Official Names in Department Pages
 
-Department pages support `{PLACEHOLDER}` tokens that are automatically replaced with values from a companion JSON file of the same name. For example, `executive.md` can reference `{MAYOR}` and `{GOVERNMENT_NAME}`, which are defined in `executive.json`:
-
-```json
-{
-  "GOVERNMENT_NAME": "Lapu Lapu City",
-  "MAYOR": "Ma. Cynthia K. Chan",
-  "MAYOR_HE_SHE": "she",
-  "HONORIFIC_TITLE": "Honorable",
-  "VICE_MAYOR": "Celedonio B. Sitoy",
-  "VICE_MAYOR_HE_SHE": "he",
-  "YEAR_ELECTED": "2022"
-}
-```
-
-To update official names or titles, **edit only the JSON file** — the markdown content updates automatically. If no JSON file exists, placeholders fall back to environment variables (`VITE_MAYOR`, etc.) or are left as-is.
+There's no placeholder/templating system — department pages (e.g. `executive.md`, `legislative.md`) contain real values written directly into the markdown. To update an official's name after an election, edit the relevant `.md` file in `content/government/departments/` directly and replace the outgoing name with the incoming one.
 
 > **Note:** Adding a brand-new government _category_ (e.g., a section alongside `departments`) requires a developer to register it in `src/data/government.yaml` and `src/data/yamlLoader.ts`.
 

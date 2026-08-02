@@ -1,17 +1,46 @@
 import React, { useState } from 'react';
-import {
-  X,
-  Menu,
-  ChevronDown,
-  Globe,
-  Search,
-  CheckCircle2,
-} from 'lucide-react';
+import { X, Menu, ChevronDown, Phone } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGES } from '../../i18n/languages';
+import { hotlines } from '../../data/hotlines';
+import { Ticker } from '../ui/Ticker';
+
+const HOTLINE_ITEMS = hotlines.map(h => `${h.label}: ${h.number}`);
+
+function LanguageToggle({
+  language,
+  onChange,
+  className = '',
+}: {
+  language: string;
+  onChange: (lang: LanguageType) => void;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`inline-flex rounded-md border border-gray-300 overflow-hidden ${className}`}
+    >
+      {Object.entries(LANGUAGES).map(([code, lang]) => (
+        <button
+          key={code}
+          type="button"
+          onClick={() => onChange(code as LanguageType)}
+          aria-pressed={language === code}
+          className={`px-2.5 py-1 text-xs font-semibold transition-colors ${
+            language === code
+              ? 'bg-primary-600 text-white'
+              : 'bg-white text-gray-700 hover:bg-gray-100'
+          }`}
+        >
+          {lang.code.toUpperCase()}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,52 +69,43 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top bar with language switcher and additional links */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-4 flex justify-end items-center h-10">
+      {/* Top bar: hotline ticker + meta links + language switcher */}
+      <div className="border-b border-gray-200 bg-gray-50">
+        <div className="container mx-auto px-4 flex justify-between items-center h-10">
+          <a
+            href="tel:911"
+            className="flex items-center gap-2 text-xs font-semibold text-primary-700 hover:text-primary-800 transition-colors min-w-0"
+            aria-label="Emergency hotlines"
+          >
+            <Phone
+              className="h-3.5 w-3.5 shrink-0"
+              strokeWidth={2.5}
+              aria-hidden="true"
+            />
+            <Ticker items={HOTLINE_ITEMS} className="truncate" />
+          </a>
           <div className="flex items-center space-x-4">
             <a
-              href="https://bettergov.ph/join-us"
+              href="https://github.com/Kelxety/betterpuertoprincesa"
               className="text-xs text-primary-600 hover:text-primary-700 font-semibold transition-colors"
               target="_blank"
+              rel="noreferrer"
             >
               🚀 Join Us
             </a>
             <a
-              href="https://bettergov.ph/about"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              About BetterGov
-            </a>
-            <a
-              href="https://www.gov.ph"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              Official Gov.ph
-            </a>
-
-            <a
-              href="https://bettergov.ph/philippines/hotlines"
+              href="https://puertoprincesa.ph"
               className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
               target="_blank"
               rel="noreferrer"
             >
-              Hotlines
+              Official Puerto Princesa Website
             </a>
             <div className="hidden md:block">
-              <select
-                value={i18n.language}
-                onChange={e => changeLanguage(e.target.value as LanguageType)}
-                className="text-xs border border-gray-300 rounded px-2 py-1 bg-white text-gray-700 hover:border-primary-600 focus:outline-none focus:ring-1 focus:ring-primary-600 focus:border-primary-600"
-              >
-                {Object.entries(LANGUAGES).map(([code, lang]) => (
-                  <option key={code} value={code}>
-                    {lang.nativeName}
-                  </option>
-                ))}
-              </select>
+              <LanguageToggle
+                language={i18n.language}
+                onChange={changeLanguage}
+              />
             </div>
           </div>
         </div>
@@ -96,36 +116,30 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-              <div>
-                <div className="text-black font-bold">
-                  {import.meta.env.VITE_GOVERNMENT_NAME}
-                </div>
-                <div className="text-xs text-gray-800">
-                  {t('site_description')}
-                </div>
-              </div>
+              <img
+                src="/logos/logo.svg"
+                alt="Puerto Princesa City"
+                className="h-15 w-auto"
+              />
             </Link>
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center space-x-8 pr-24">
+          <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
                 >
                   {t(`navbar.${item.label.replace(' ', '').toLowerCase()}`)}
                   {item.children && (
-                    <ChevronDown className="ml-1 h-4 w-4 text-gray-800 group-hover:text-primary-600 transition-colors" />
+                    <ChevronDown
+                      className="ml-1 h-4 w-4 text-gray-800 group-hover:text-primary-600 transition-colors"
+                      strokeWidth={2.5}
+                    />
                   )}
-                </a>
+                </Link>
                 {item.children && (
                   <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div
@@ -149,28 +163,6 @@ const Navbar: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link
-              to="/about"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              to="/search"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              <Search className="h-4 w-4 mr-1" />
-              Search
-            </Link>
-            {/* <Link
-              to="/sitemap"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              Sitemap
-            </Link> */}
-          </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
             <button
@@ -179,9 +171,17 @@ const Navbar: React.FC = () => {
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X
+                  className="block h-6 w-6"
+                  strokeWidth={2.5}
+                  aria-hidden="true"
+                />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu
+                  className="block h-6 w-6"
+                  strokeWidth={2.5}
+                  aria-hidden="true"
+                />
               )}
             </button>
           </div>
@@ -203,6 +203,7 @@ const Navbar: React.FC = () => {
                     className={`h-5 w-5 transition-transform ${
                       activeMenu === item.label ? 'transform rotate-180' : ''
                     }`}
+                    strokeWidth={2.5}
                   />
                 )}
               </button>
@@ -222,49 +223,20 @@ const Navbar: React.FC = () => {
               )}
             </div>
           ))}
-          <Link
-            to="/join-us"
+          <a
+            href="https://github.com/Kelxety/betterpuertoprincesa"
             onClick={closeMenu}
+            target="_blank"
+            rel="noreferrer"
             className="block px-4 py-2 text-base font-semibold text-primary-600 hover:bg-primary-50 hover:text-primary-700"
           >
             🚀 Join Us
-          </Link>
-          <Link
-            to="/about"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            About
-          </Link>
-          <Link
-            to="/search"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            Search
-          </Link>
-          <Link
-            to="/sitemap"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            Sitemap
-          </Link>
+          </a>
           <div className="px-4 py-3 border-t border-gray-200">
-            <div className="flex items-center">
-              <Globe className="h-5 w-5 text-gray-800 mr-2" />
-              <select
-                value={i18n.language}
-                onChange={e => changeLanguage(e.target.value as LanguageType)}
-                className="text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-700 hover:border-primary-600 focus:outline-none focus:ring-1 focus:ring-primary-600 focus:border-primary-600"
-              >
-                {Object.entries(LANGUAGES).map(([code, lang]) => (
-                  <option key={code} value={code}>
-                    {lang.nativeName}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <LanguageToggle
+              language={i18n.language}
+              onChange={changeLanguage}
+            />
           </div>
         </div>
       </div>

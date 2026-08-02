@@ -11,22 +11,23 @@ npm run lint         # Run ESLint
 npm run lint:fix     # Auto-fix ESLint issues
 npm run format       # Format with Prettier
 npm run dev:yaml     # Convert YAML to JSON, then start dev server
-npm run setup        # Interactive setup script for new installations
 ```
 
 Pre-commit hook runs `lint-staged` automatically (ESLint + Prettier on staged files).
 
 ## Architecture
 
-This is a React 19 + TypeScript + Vite app for Philippine Local Government Units (LGUs). It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system.
+This is a React 19 + TypeScript + Vite app, the official BetterPuertoPrincesa.org civic portal for Puerto Princesa City, Palawan. It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system. This is not a generic multi-LGU starter kit — content, branding, and data are hardcoded for Puerto Princesa specifically.
 
 ### Routing
 
-`src/App.tsx` defines six routes:
+`src/App.tsx` defines the routes:
 
 - `/` — Home page
 - `/services` / `/services/:category` — Services listing
 - `/government` / `/government/:category` — Government section listing
+- `/statistics` — City statistics (demographics, competitiveness index, fiscal transparency, infrastructure projects)
+- `/news` — News & updates
 - `/:documentSlug` / `/:lang/:documentSlug` — Document viewer (markdown content, used by both services and government)
 
 ### Content System
@@ -57,13 +58,7 @@ When adding a new government category, you must:
 - Create `content/government/{slug}/index.yaml`
 - Add the static import and mapping entry to `src/data/yamlLoader.ts` (`govCategoryIndexMap`)
 
-Markdown files are loaded dynamically via `import()` in `src/lib/markdownLoader.ts`. The title is extracted from the first `# Heading` and the description from the first paragraph.
-
-#### Companion JSON files
-
-A markdown page can have an optional companion JSON file with the same slug (e.g. `executive.md` + `executive.json`). The loader attempts to import the JSON and passes it to `interpolate()`, which replaces `{PLACEHOLDER}` tokens in the markdown. Resolution order: JSON value → `VITE_<KEY>` env var → unchanged token.
-
-Example: `{MAYOR}` in the markdown is replaced with the `MAYOR` value from `executive.json`, or `VITE_MAYOR` if no JSON file exists.
+Markdown files are loaded dynamically via `import()` in `src/lib/markdownLoader.ts`. The title is extracted from the first `# Heading` and the description from the first paragraph. Content is plain markdown — no `{PLACEHOLDER}` templating system; write real values directly (e.g. the mayor's actual name, not a token).
 
 ### Internationalization
 
@@ -72,10 +67,6 @@ Example: `{MAYOR}` in the markdown is replaced with the `MAYOR` value from `exec
 - Fallback language: `en`
 - Supported languages are defined in `src/types/index.ts` (`LanguageType`)
 - Currently only `public/locales/en/common.json` exists
-
-### Environment Variables
-
-The app uses `VITE_GOVERNMENT_NAME` (referenced in `Services.tsx`) for branding. Additional env vars are configured via the setup script.
 
 ### UI Components
 

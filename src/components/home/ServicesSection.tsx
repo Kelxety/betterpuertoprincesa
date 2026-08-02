@@ -1,5 +1,6 @@
 import Section from '../ui/Section';
 import * as LucideIcons from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
@@ -24,9 +25,13 @@ interface Category {
 export default function ServicesSection({
   title,
   description,
+  limit,
+  showViewAll = true,
 }: {
   title?: string;
   description?: string;
+  limit?: number;
+  showViewAll?: boolean;
 }) {
   const { t } = useTranslation();
 
@@ -37,7 +42,10 @@ export default function ServicesSection({
     return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
   };
 
-  const displayedCategories = serviceCategories.categories as Category[];
+  const allCategories = serviceCategories.categories as Category[];
+  const displayedCategories = limit
+    ? allCategories.slice(0, limit)
+    : allCategories;
 
   return (
     <Section>
@@ -72,6 +80,23 @@ export default function ServicesSection({
             </Link>
           </Card>
         ))}
+        {showViewAll && (
+          <Card hoverable className="border-t-4 border-primary-500">
+            <Link
+              to="/services"
+              className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
+            >
+              <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
+                <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4">
+                  <ArrowRight className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {t('services.viewAllCard')}
+                </h3>
+              </CardContent>
+            </Link>
+          </Card>
+        )}
       </div>
     </Section>
   );
