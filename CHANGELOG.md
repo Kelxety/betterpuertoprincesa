@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Puerto Princesa branding: logo, favicon set, `site.webmanifest`, hero graphic (`public/eulalia.svg`)
+- Homepage sections: "Puerto Princesa at a Glance", weather + city map, hotlines, news, official directory banner
+- `src/pages/Statistics.tsx` and `src/pages/News.tsx` — dedicated `/statistics` and `/news` routes
+- `src/components/home/PuertoPrincesaMap.tsx` — Leaflet map centered on City Hall
+- Real, sourced data: `src/data/{hotlines,news,statistics}.ts`, plus 21 previously-missing service Markdown pages across 6 categories
+- Filipino translations (`public/locales/fil/common.json`) and an English/Filipino toggle in the navbar
+- `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`
+
+### Changed
+
+- i18n rewired to a single `i18next-http-backend`-loaded `common` namespace (previously two disconnected i18n systems where Filipino strings were never actually loaded)
+- `ServicesSection` / `GovernmentActivitySection` now accept `limit`/`showViewAll` props so the homepage (3 items + "view all") and full listing pages can share one component correctly
+- `Breadcrumbs` and `Document.tsx` now translate their "Home" label and loading/error states
+- README, CONTENT-GUIDE, CONTENT-MANAGEMENT, and DEPLOYMENT-GUIDE rewritten for Puerto Princesa specifically, following the BetterAborlan documentation pattern
+
+### Removed
+
+- All starter-kit scaffolding: `STARTER-KIT-README.md`, `STARTER-KIT-SUMMARY.md`, `scripts/setup-starter-kit.js`, `env.example`, dead `src/i18n/locales/*.json`, unused `src/components/I18nTest.tsx`
+- `{PLACEHOLDER}` companion-JSON templating system and its `VITE_<KEY>` env var fallback — content is written directly for Puerto Princesa
+
 ## [0.2.0] - 2026-03-07
 
 ### Added

@@ -1,6 +1,6 @@
 # Content Management Guide for Non-Technical Users
 
-This guide will help you edit and manage content for the Better Local Government website using GitHub's web interface, without needing to install any software or use command-line tools.
+This guide will help you edit and manage content for BetterPuertoPrincesa.org using GitHub's web interface, without needing to install any software or use command-line tools.
 
 ## Table of Contents
 

@@ -1,142 +1,103 @@
-# 🏛️ BetterPuertoPrincesa.org
+# BetterPuertoPrincesa.org
 
-A community-run civic portal for **Puerto Princesa City, Palawan** — part of the [BetterGov.ph](https://bettergov.ph) civic tech movement. Built with React, TypeScript, and Tailwind CSS.
+A community-run civic transparency portal for **Puerto Princesa City, Palawan** — government services directory, department/office pages, city statistics, weather + map, and local news, built so residents can actually find and use them. Part of the [BetterGov.ph](https://bettergov.ph) civic tech movement.
 
-## ✨ Features
+![Version](https://img.shields.io/badge/version-0.2.0-green)
+![License](https://img.shields.io/badge/license-CC0%201.0-blue)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
 
-- **📱 Responsive Design**: Mobile-first approach with modern UI/UX
-- **♿ Accessibility**: WCAG 2.1 compliant design
-- **📝 Content Management**: YAML + Markdown content system for easy updates
-- **📊 Real Data**: Demographics, competitiveness index, fiscal transparency, and infrastructure project data — sourced and cited, never fabricated
-- **⚡ Fast Performance**: Built with Vite for optimal loading speeds
-- **🔍 SEO Optimized**: Built-in SEO with react-helmet, meta tags, and Open Graph support
+This is not a generic multi-LGU starter kit — content, branding, and data are hardcoded specifically for Puerto Princesa City. No `{PLACEHOLDER}` templating, no per-LGU config.
 
-## 🚀 Quick Start
+## Stack
 
-### Prerequisites
+- **React 19 + TypeScript**, built with **Vite 7**
+- **React Router v7** for routing
+- **Tailwind CSS v4** (CSS-first `@theme` config in `src/index.css`) + [`@bettergov/kapwa`](https://github.com/bettergov/kapwa) (CC0 design system) for card/banner primitives
+- **`content/*.md` + `*.yaml`** for service and government department pages — no database, no CMS; edit Markdown directly, the same pattern BetterGov.ph and other BetterLGU sites use
+- **i18next** (English/Filipino) with `HttpBackend`-loaded translation JSON from `public/locales/`
+- **Leaflet** + `react-leaflet` for the city map, **Open-Meteo** for live weather
+- Deploy target: **Vercel** (`vercel.json` included); alternatives documented in [DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)
 
-- Node.js 18+
-- npm
-
-### Installation
+## Getting started
 
 ```bash
 git clone https://github.com/Kelxety/betterpuertoprincesa.git
 cd betterpuertoprincesa
 npm install
-npm run dev
+npm run dev          # http://localhost:5173
 ```
 
-Then open `http://localhost:5173`.
+```bash
+npm run build   # tsc -b && vite build
+npm run lint
+```
 
-## 📚 Documentation
+## Branches & environments
 
-- **[CONTENT-GUIDE.md](CONTENT-GUIDE.md)** - Content writing and contribution guidelines
-- **[CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md)** - Guide for non-technical users to edit and manage website content
-- **[DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)** - Deployment instructions for Vercel and other platforms
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
+- **`main`** — production.
+- **`develop`** — default integration branch. Branch feature/fix work off `develop`, open a PR back into it.
 
-## 🛠️ Development
+When `develop` is ready to ship, open a PR from `develop` into `main`.
 
-### Available Scripts
+No CI is wired up yet (no GitHub Actions workflows in this repo) — run `npm run lint` and `npm run build` locally before opening a PR. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run format` - Format code with Prettier
-- `npm run convert-yaml` - Convert YAML to JSON
-- `npm run dev:yaml` - Convert YAML and start dev server
+## Data policy — no fabricated civic data
 
-### Project Structure
+**Never fabricate or guess values for officials, statistics, ordinances, or contact info.** Content under `content/**/*.md` and `src/data/{hotlines,news,statistics}.ts` is written from verified sources — cite the source (a comment or note) whenever you add or change a real-world fact.
+
+## Documentation
+
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — branching model, commit style, and how to submit a PR (code or content)
+- **[CONTENT-GUIDE.md](CONTENT-GUIDE.md)** — content writing and structure guidelines
+- **[CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md)** — step-by-step guide for editing content from GitHub's web UI, no Git required
+- **[DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)** — deploying to Vercel and alternatives
+- **[CHANGELOG.md](CHANGELOG.md)** — version history
+
+## Project structure
 
 ```
 content/
-├── government/         # Government section markdown & YAML
-│   └── departments/    # Department pages (executive, legislative)
-└── services/           # Services section markdown & YAML
+├── government/          # Government section markdown & YAML
+│   └── departments/     # Department pages (executive, legislative)
+└── services/             # Services section markdown & YAML, by category
 
 src/
-├── components/         # Reusable UI components
-│   ├── home/           # Home page components
-│   ├── layout/         # Layout components (Navbar, Footer, InfoBar)
-│   └── ui/             # Basic UI components
-├── data/               # YAML configuration + sourced data (statistics, news, hotlines)
-├── i18n/               # Internationalization
-├── lib/                # Utility functions (markdownLoader, yamlLoader)
-├── pages/              # Page components (Home, Services, Government, Statistics, News, Document)
-└── types/              # TypeScript type definitions
+├── components/           # Reusable UI components
+│   ├── home/             # Home page sections
+│   ├── layout/           # Navbar, Footer, InfoBar
+│   └── ui/                # Base UI primitives (Section, Heading, Breadcrumbs, ...)
+├── data/                 # YAML category config + sourced data (statistics, news, hotlines)
+├── i18n/                 # i18next setup
+├── lib/                  # markdownLoader, yamlLoader, and other utilities
+├── pages/                # Route-level pages (Home, Services, Government, Statistics, News, Document)
+└── types/                # TypeScript type definitions
 ```
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions from everyone! Whether you're a developer, a Puerto Princesa resident, or a community member, there are many ways to help.
+Whether you're a developer, a Puerto Princesa resident, or just spotted an outdated phone number — see **[CONTRIBUTING.md](CONTRIBUTING.md)** for the branching model, commit conventions, and how to submit a change. It covers both code contributions and non-technical content edits made straight from GitHub's web UI. Also see **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** and, if you find a security issue, **[SECURITY.md](SECURITY.md)** for how to report it responsibly.
 
-### 🌟 For Non-Technical Contributors
+## Community
 
-**No coding experience required!** You can contribute content and improvements using GitHub's web interface.
+Join the [BetterGov.ph Discord](https://discord.com/invite/mHtThpN8bT) to hang out, ask questions, or help build BetterLGU sites like this one.
 
-1. **Create a GitHub account** (free at github.com)
-2. **Navigate to the repository** in your web browser
-3. **Use our detailed guide**: [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md) - Complete step-by-step instructions for editing content without any technical knowledge
+## License
 
-#### What You Can Contribute
+Creative Commons Zero (CC0) 1.0 — see [LICENSE](LICENSE). Public domain, no restrictions on use, modification, or distribution.
 
-- **📝 Content Updates**: Fix outdated information, add new services, improve descriptions
-- **📋 Service Information**: Add details about government services, requirements, and processes
-- **🔍 Content Review**: Check for accuracy, clarity, and completeness
-- **💡 Suggestions**: Propose new features or improvements
+## Acknowledgments
 
-#### How to Contribute (No Git Required)
-
-1. Go to `content/services/` for service pages or `content/government/` for department pages
-2. Click the pencil icon (✏️) on any `.md` file to edit
-3. Write a brief description of what you changed and click "Commit changes"
-
-### 👨‍💻 For Technical Contributors
-
-1. **Fork the repository** on GitHub
-2. **Clone your fork**: `git clone https://github.com/YOUR-USERNAME/BetterPuertoPrincesa.git`
-3. **Create a branch**: `git checkout -b feature/your-change`
-4. **Make your changes** and test with `npm run dev`
-5. **Run checks**: `npm run lint && npm run build`
-6. **Submit a pull request**
-
-### 📋 Content Guidelines
-
-- **Accuracy first**: only add information you can verify — cite a source, or leave it out
-- **Clear language**: write for the general public, avoid jargon
-- **Complete information**: include requirements, steps, and contact details where relevant
-- **Accessibility**: use clear headings, simple language, and logical structure
-
-### 🎯 Priority Areas for Contribution
-
-1. **Content accuracy**: update outdated information, fix errors
-2. **Service coverage**: add missing Puerto Princesa government services and programs
-3. **Data verification**: help confirm figures in `src/data/statistics.ts` and `src/data/news.ts` against official sources
-4. **Accessibility**: ensure content is usable by all residents
-
-### 🆘 Need Help?
-
-- **For Content Questions**: Check [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md)
-- **For Technical Issues**: Open an issue on GitHub
-- **Join the community**: [BetterGov.ph Discord](https://discord.com/invite/mHtThpN8bT)
-
-## 📄 License
-
-This project is licensed under the Creative Commons Zero (CC0) License - see the [LICENSE](LICENSE) file for details. Public domain — no restrictions on use, modification, or distribution.
-
-## 🙏 Acknowledgments
-
-- Built with [React](https://reactjs.org/)
+- Built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/)
 - Styled with [Tailwind CSS v4](https://tailwindcss.com/)
 - UI components by [@bettergov/kapwa](https://github.com/bettergov/kapwa)
-- Icons by [Lucide React](https://lucide.dev/)
-- Content management with [YAML](https://yaml.org/)
+- Icons by [Lucide](https://lucide.dev/)
+- Content managed as [YAML](https://yaml.org/) + Markdown
 - Internationalization with [i18next](https://www.i18next.com/)
 - Part of the [BetterGov.ph](https://bettergov.ph) civic tech movement
 
 ---
 
-**Made with ❤️ for the people of Puerto Princesa City**
+**Made for the people of Puerto Princesa City.**
