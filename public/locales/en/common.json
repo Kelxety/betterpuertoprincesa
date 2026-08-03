@@ -3,7 +3,7 @@
     "subtitle": "A community-run portal to find information of the Puerto Princesa City Government"
   },
   "landmark": {
-    "tooltip": "Know more about the \"Prinsesa ng Baybay\"",
+    "calloutText": "Know more about the \"Prinsesa ng Baybay\"",
     "title": "Ang Prinsesa ng Baybay",
     "subtitle": "The story behind the statue on the Puerto Princesa Baywalk.",
     "historyHeading": "History",
