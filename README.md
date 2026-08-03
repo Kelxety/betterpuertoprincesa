@@ -9,8 +9,6 @@ A community-run civic transparency portal for **Puerto Princesa City, Palawan** 
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
 
-This is not a generic multi-LGU starter kit — content, branding, and data are hardcoded specifically for Puerto Princesa City. No `{PLACEHOLDER}` templating, no per-LGU config.
-
 ## Stack
 
 - **React 19 + TypeScript**, built with **Vite 7**
@@ -24,7 +22,7 @@ This is not a generic multi-LGU starter kit — content, branding, and data are 
 ## Getting started
 
 ```bash
-git clone https://github.com/Kelxety/betterpuertoprincesa.git
+git clone https://github.com/hmcldryl/betterpuertoprincesa.git
 cd betterpuertoprincesa
 npm install
 npm run dev          # http://localhost:5173
@@ -42,7 +40,7 @@ npm run lint
 
 When `develop` is ready to ship, open a PR from `develop` into `main`.
 
-No CI is wired up yet (no GitHub Actions workflows in this repo) — run `npm run lint` and `npm run build` locally before opening a PR. See [CONTRIBUTING.md](CONTRIBUTING.md).
+CI (`.github/workflows/vercel-deploy.yml`) builds and deploys to Vercel on pull requests (preview) and pushes to `main` (production). Still run `npm run lint` and `npm run build` locally before opening a PR. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Data policy — no fabricated civic data
 
@@ -83,6 +81,10 @@ Whether you're a developer, a Puerto Princesa resident, or just spotted an outda
 ## Community
 
 Join the [BetterGov.ph Discord](https://discord.com/invite/mHtThpN8bT) to hang out, ask questions, or help build BetterLGU sites like this one.
+
+## Contributors
+
+[![Contributors Display](https://badges.pufler.dev/contributors/hmcldryl/betterpuertoprincesa?size=50&padding=5&perRow=10&bots=true)](https://github.com/hmcldryl/betterpuertoprincesa/graphs/contributors)
 
 ## License
 

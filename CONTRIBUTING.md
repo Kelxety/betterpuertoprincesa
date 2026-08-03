@@ -23,7 +23,7 @@ Workflow:
 Prerequisites: Node.js 18+, npm.
 
 ```bash
-git clone https://github.com/Kelxety/betterpuertoprincesa.git
+git clone https://github.com/hmcldryl/betterpuertoprincesa.git
 cd betterpuertoprincesa
 npm install          # also installs the git hooks (husky "prepare" script)
 npm run dev          # http://localhost:5173
@@ -41,7 +41,7 @@ A pre-commit hook (`.husky/pre-commit` → `lint-staged`) runs ESLint and Pretti
 
 ### Reporting bugs
 
-1. Check existing [issues](https://github.com/Kelxety/betterpuertoprincesa/issues) to avoid duplicates.
+1. Check existing [issues](https://github.com/hmcldryl/betterpuertoprincesa/issues) to avoid duplicates.
 2. Open a new issue with a clear title, steps to reproduce, expected vs. actual behavior, and a screenshot if it's visual.
 
 ### Suggesting features

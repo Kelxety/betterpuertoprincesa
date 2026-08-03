@@ -17,7 +17,7 @@ Pre-commit hook runs `lint-staged` automatically (ESLint + Prettier on staged fi
 
 ## Architecture
 
-This is a React 19 + TypeScript + Vite app, the official BetterPuertoPrincesa.org civic portal for Puerto Princesa City, Palawan. It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system. This is not a generic multi-LGU starter kit — content, branding, and data are hardcoded for Puerto Princesa specifically.
+This is a React 19 + TypeScript + Vite app, the official BetterPuertoPrincesa.org civic portal for Puerto Princesa City, Palawan. It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system.
 
 ### Routing
 
@@ -58,7 +58,7 @@ When adding a new government category, you must:
 - Create `content/government/{slug}/index.yaml`
 - Add the static import and mapping entry to `src/data/yamlLoader.ts` (`govCategoryIndexMap`)
 
-Markdown files are loaded dynamically via `import()` in `src/lib/markdownLoader.ts`. The title is extracted from the first `# Heading` and the description from the first paragraph. Content is plain markdown — no `{PLACEHOLDER}` templating system; write real values directly (e.g. the mayor's actual name, not a token).
+Markdown files are loaded dynamically via `import()` in `src/lib/markdownLoader.ts`. The title is extracted from the first `# Heading` and the description from the first paragraph. Content is plain markdown — write real values directly (e.g. the mayor's actual name, not a token).
 
 ### Internationalization
 
