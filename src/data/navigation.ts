@@ -31,6 +31,7 @@ export const mainNavigation: NavigationItem[] = [
     ],
   },
   { label: 'Statistics', href: '/statistics' },
+  { label: 'Transparency', href: '/transparency' },
   { label: 'News', href: '/news' },
 ];
 
@@ -57,6 +58,7 @@ export const footerNavigation = {
         },
         { label: 'City Government Website', href: 'https://puertoprincesa.ph' },
         { label: 'City Statistics', href: '/statistics' },
+        { label: 'Budget Transparency', href: '/transparency' },
         { label: 'News & Updates', href: '/news' },
       ],
     },

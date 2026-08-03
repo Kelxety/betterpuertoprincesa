@@ -1,23 +1,21 @@
-import { Users, MapPin, Ruler, Award, TrendingUp, HardHat } from 'lucide-react';
+import {
+  Users,
+  MapPin,
+  Ruler,
+  Award,
+  TrendingUp,
+  Landmark,
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Section from '../components/ui/Section';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import {
-  demographics,
-  competitiveIndex,
-  fiscalTransparency,
-  dpwhProjects,
-} from '../data/statistics';
+import { demographics, competitiveIndex } from '../data/statistics';
 
 const numberFormat = new Intl.NumberFormat('en-US');
-const currencyFormat = new Intl.NumberFormat('en-PH', {
-  style: 'currency',
-  currency: 'PHP',
-  maximumFractionDigits: 0,
-});
 
 const Statistics: React.FC = () => {
   const { t } = useTranslation('common');
@@ -137,21 +135,19 @@ const Statistics: React.FC = () => {
         </Section>
 
         <Section>
-          <Heading level={2}>{t('statistics.fiscalTitle')}</Heading>
-          <div className="bg-white rounded-lg border border-gray-200 p-6 max-w-xl">
-            <div className="text-sm text-gray-500">
-              {fiscalTransparency.year} {t('statistics.annualBudget')}
-            </div>
-            <div className="text-3xl font-bold text-gray-900 mt-1">
-              {currencyFormat.format(fiscalTransparency.totalIncome)}
-            </div>
-            <div className="text-sm text-gray-500 mt-1">
-              {t('statistics.balancedBudgetNote')}
-            </div>
+          <div className="flex items-center gap-2 mb-2">
+            <Landmark className="h-6 w-6 text-primary-600" strokeWidth={2.5} />
+            <Heading level={2} className="!mb-0">
+              {t('statistics.fiscalTitle')}
+            </Heading>
           </div>
-          <Text size="sm" className="!text-gray-400 mt-4">
-            {t('statistics.source')}: {fiscalTransparency.source}
-          </Text>
+          <Text className="!max-w-2xl">{t('statistics.fiscalTeaser')}</Text>
+          <Link
+            to="/transparency"
+            className="inline-block mt-4 px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-md hover:bg-primary-700 transition-colors"
+          >
+            {t('statistics.viewTransparency')}
+          </Link>
         </Section>
 
         <Section className="!bg-gray-50">
@@ -170,58 +166,6 @@ const Statistics: React.FC = () => {
               </div>
             ))}
           </div>
-        </Section>
-
-        <Section>
-          <div className="flex items-center gap-2 mb-2">
-            <HardHat className="h-6 w-6 text-primary-600" strokeWidth={2.5} />
-            <Heading level={2} className="!mb-0">
-              {t('statistics.infrastructureTitle')}
-            </Heading>
-          </div>
-          <Text className="!max-w-2xl">
-            {t('statistics.infrastructureDescription', {
-              count: dpwhProjects.summary.totalProjects,
-              cost: numberFormat.format(dpwhProjects.summary.totalCost),
-              agency: dpwhProjects.summary.implementingAgency,
-            })}
-          </Text>
-          <div className="overflow-x-auto mt-6">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="text-left text-xs font-semibold text-gray-500 uppercase border-b border-gray-200">
-                  <th className="py-2 pr-4">{t('statistics.tableProject')}</th>
-                  <th className="py-2 pr-4">{t('statistics.tableLocation')}</th>
-                  <th className="py-2 pr-4">{t('statistics.tableCost')}</th>
-                  <th className="py-2">{t('statistics.tableStatus')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {dpwhProjects.projects.map(p => (
-                  <tr key={p.name} className="border-b border-gray-100">
-                    <td className="py-3 pr-4 text-gray-900">
-                      {p.name}
-                      {p.contractor && (
-                        <div className="text-xs text-gray-500 mt-0.5">
-                          {t('statistics.contractorLabel')}: {p.contractor}
-                        </div>
-                      )}
-                    </td>
-                    <td className="py-3 pr-4 text-gray-600">{p.location}</td>
-                    <td className="py-3 pr-4 text-gray-600">
-                      {p.cost ? currencyFormat.format(p.cost) : '—'}
-                    </td>
-                    <td className="py-3 text-gray-600">
-                      {p.status ?? t('statistics.ongoingUnspecified')}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <Text size="sm" className="!text-gray-400 mt-4">
-            {t('statistics.source')}: {dpwhProjects.source}
-          </Text>
         </Section>
       </main>
     </>

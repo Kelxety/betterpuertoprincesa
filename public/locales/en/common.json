@@ -43,12 +43,10 @@
     "cmciYear": "CMCI",
     "score": "Score",
     "source": "Source",
-    "fiscalTitle": "Fiscal Transparency",
-    "annualBudget": "Annual Budget",
-    "balancedBudgetNote": "Total income = total expenditure (balanced budget)",
+    "fiscalTitle": "Budget Transparency",
+    "fiscalTeaser": "See Puerto Princesa's full FY2026 budget breakdown, National Tax Allotment, and infrastructure spending.",
+    "viewTransparency": "View Budget Transparency",
     "barangaysHeading": "Barangays ({{count}})",
-    "infrastructureTitle": "Infrastructure Projects",
-    "infrastructureDescription": "{{count}} flood control and drainage projects (₱{{cost}} total), implemented by the {{agency}}. Only the largest projects are itemized below; the rest aren't individually broken out in available reporting.",
     "tableProject": "Project",
     "tableLocation": "Location",
     "tableCost": "Cost",
@@ -56,6 +54,33 @@
     "contractorLabel": "Contractor",
     "ongoingUnspecified": "Ongoing/unspecified",
     "viewFullProfile": "View Full Profile"
+  },
+  "transparency": {
+    "title": "Budget Transparency",
+    "subtitle": "Puerto Princesa City's official budget and National Tax Allotment, sourced from the City Government's Full Disclosure documents, plus DPWH infrastructure spending sourced from DPWH's public project database.",
+    "budgetTitle": "FY{{year}} City Budget",
+    "totalAppropriations": "Total Appropriations",
+    "currentOperating": "Current Operating Expenditures",
+    "capitalOutlay": "Capital Outlay",
+    "sectorTitle": "Appropriations by Sector",
+    "ntaTitle": "National Tax Allotment (NTA)",
+    "ntaNote": "Estimated from the mandatory 20% Development Fund set-aside, since the city's budget workbook itemizes the set-aside but not the gross NTA figure.",
+    "ldrrmfNote": "{{percent}}% of NTA, set aside for disaster risk reduction and management.",
+    "annualBudgetTitle": "Annual Budget Allocation",
+    "annualBudgetDescription": "How Puerto Princesa's total approved budget has changed year over year.",
+    "byYearCaption": "Budget by year (2016–2025), summed across every matching project that year — not just the ones itemized below.",
+    "floodControlTitle": "Flood Control & Drainage Projects",
+    "floodControlDescription": "{{count}} flood control and drainage projects located in Puerto Princesa City (₱{{cost}} total), implemented by DPWH.",
+    "infrastructureTitle": "Other Infrastructure Projects",
+    "infrastructureDescription": "{{count}} additional DPWH-implemented projects located in Puerto Princesa City (₱{{cost}} total), across roads, bridges, buildings, and water systems.",
+    "categoryProjectCount": "{{count}} projects",
+    "infrastructureNote": "Only the 5 highest-cost projects per category are itemized above; category totals and counts cover every matching project, including ones still at the procurement stage with no awarded contract cost yet.",
+    "viewAllProjects": "View all {{count}} projects on transparency.bettergov.ph",
+    "asOf": "as of",
+    "documentsTitle": "Official Source Documents",
+    "documentsSubtitle": "Primary documents published by the City Government of Puerto Princesa's Full Disclosure Board.",
+    "disclaimerTitle": "About This Data",
+    "disclaimerBody": "Budget figures on this page are sourced directly from Puerto Princesa's official budget documents; infrastructure project figures are sourced from DPWH's public project database. Both are updated periodically, not in real time. Some figures (like the National Tax Allotment total) are derived from other stated figures where the source document doesn't state them outright — see the notes next to each figure for details."
   },
   "glance": {
     "title": "Puerto Princesa at a Glance"
@@ -90,6 +115,7 @@
     "hotlines": "Hotlines",
     "holidays": "Holidays",
     "statistics": "Statistics",
+    "transparency": "Transparency",
     "news": "News"
   }
 }
