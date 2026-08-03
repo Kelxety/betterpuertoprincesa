@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           </a>
           <div className="flex items-center space-x-4">
             <a
-              href="https://github.com/Kelxety/betterpuertoprincesa"
+              href="https://github.com/hmcldryl/betterpuertoprincesa"
               className="text-xs text-primary-600 hover:text-primary-700 font-semibold transition-colors"
               target="_blank"
               rel="noreferrer"
@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
             </div>
           ))}
           <a
-            href="https://github.com/Kelxety/betterpuertoprincesa"
+            href="https://github.com/hmcldryl/betterpuertoprincesa"
             onClick={closeMenu}
             target="_blank"
             rel="noreferrer"
