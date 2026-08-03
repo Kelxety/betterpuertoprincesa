@@ -262,7 +262,7 @@ Use clear, descriptive headings:
 
 ## 🔧 Updating Official Names and Dates
 
-This site is built specifically for Puerto Princesa City — there is no `{PLACEHOLDER}` templating system. Write real values (the mayor's actual name, the current year, etc.) directly into the markdown.
+Write real values (the mayor's actual name, the current year, etc.) directly into the markdown.
 
 When officials change (e.g. after an election), **edit the markdown files directly** — search the `content/` directory for the outgoing official's name and replace it with the incoming one.
 

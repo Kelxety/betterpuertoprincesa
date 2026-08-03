@@ -12,7 +12,7 @@ We take security seriously. If you discover a vulnerability, please report it re
 
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
-Instead, use GitHub's private reporting: go to the [Security tab](https://github.com/Kelxety/betterpuertoprincesa/security/advisories) of this repository and click **"Report a vulnerability"**. This opens a private advisory visible only to maintainers.
+Instead, use GitHub's private reporting: go to the [Security tab](https://github.com/hmcldryl/betterpuertoprincesa/security/advisories) of this repository and click **"Report a vulnerability"**. This opens a private advisory visible only to maintainers.
 
 Include in your report:
 
@@ -76,7 +76,7 @@ Out of scope:
 
 ## Contact
 
-Report privately via [GitHub Security Advisories](https://github.com/Kelxety/betterpuertoprincesa/security/advisories).
+Report privately via [GitHub Security Advisories](https://github.com/hmcldryl/betterpuertoprincesa/security/advisories).
 
 General inquiries: open a GitHub issue or join the [BetterGov.ph Discord](https://discord.com/invite/mHtThpN8bT).
 

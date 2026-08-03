@@ -1,3 +1,25 @@
+# 1.0.0-develop.1 (2026-08-03)
+
+### Bug Fixes
+
+- adjust prinsesa ng baybay graphic ([b593f6a](https://github.com/hmcldryl/betterpuertoprincesa/commit/b593f6a3173a338eef55360113cd3e5dd124fad1))
+- move landmark callout closer to the statue center, wrap and center text ([b04348f](https://github.com/hmcldryl/betterpuertoprincesa/commit/b04348fb3ab995ca05ccfcc6a37d6b84e97bc19b))
+- only show the landmark callout on hover/focus ([f7ce327](https://github.com/hmcldryl/betterpuertoprincesa/commit/f7ce32791603522508cb0e493720b9e187e34d27))
+- rename hero graphic from eulalia.svg to princess-of-the-sea.svg ([c07d280](https://github.com/hmcldryl/betterpuertoprincesa/commit/c07d28063911c9d77b41887ddbb1c17ed8467193))
+- shrink landmark callout box width ([2c07c6c](https://github.com/hmcldryl/betterpuertoprincesa/commit/2c07c6cd975676fbf7e419070501395076b8bef2))
+- tighten gap between landmark callout and statue ([299cd13](https://github.com/hmcldryl/betterpuertoprincesa/commit/299cd13f53af3e0b5b817708359c3874d3bd9848))
+
+### Features
+
+- add budget transparency section ([771020d](https://github.com/hmcldryl/betterpuertoprincesa/commit/771020d89b498a0d23c79d5d7c8d026933335f40))
+- add DPWH infrastructure data and historical budget trends to transparency page ([6bf56d4](https://github.com/hmcldryl/betterpuertoprincesa/commit/6bf56d4f23d0c8ea613bc2b68317aa1481f3bd01))
+- add semantic-release automation with commitlint enforcement ([56b7fab](https://github.com/hmcldryl/betterpuertoprincesa/commit/56b7fab7fee8d42249455f5844faa541cfbf140d))
+- add terraform for aws s3 deployment ([843a4b0](https://github.com/hmcldryl/betterpuertoprincesa/commit/843a4b00843c3273a85ced5b25e63b8765e89e7e))
+- **government:** add government section with departments and document viewer ([ae49f7e](https://github.com/hmcldryl/betterpuertoprincesa/commit/ae49f7e15e664522b409712cdf6a865b87dae3ac))
+- rename hero graphic to prinsesa-ng-baybay, add its own landmark page ([5135291](https://github.com/hmcldryl/betterpuertoprincesa/commit/513529192ce1ae5ac7279868ca13ec4f2d924b3f))
+- replace hero tooltip with a persistent callout pointing at the statue ([4bd23f5](https://github.com/hmcldryl/betterpuertoprincesa/commit/4bd23f5b12158e5db05f329477d150e65e0bd539))
+- replace logo and graphic SVG assets ([bc73937](https://github.com/hmcldryl/betterpuertoprincesa/commit/bc739377199c4850fb7506ac26fd525ade1e5fad))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
