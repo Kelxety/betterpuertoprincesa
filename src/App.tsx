@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import Statistics from './pages/Statistics';
+import Transparency from './pages/Transparency';
 import News from './pages/News';
 import PrinsesaNgBaybay from './pages/PrinsesaNgBaybay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -37,6 +38,7 @@ function App() {
                 element={<Document categoryType="government" />}
               />
               <Route path="/statistics" element={<Statistics />} />
+              <Route path="/transparency" element={<Transparency />} />
               <Route path="/news" element={<News />} />
               <Route
                 path="/prinsesa-ng-baybay"
