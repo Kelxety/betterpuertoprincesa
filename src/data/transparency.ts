@@ -20,6 +20,18 @@ export const cityBudget = {
   sourceUrl: cityBudgetData.metadata.sourceUrl,
 };
 
+// Sourced from each fiscal year's Annual Budget / Annual Budget Report,
+// City Government of Puerto Princesa (Full Disclosure Board). See
+// annual-budget-history.json's metadata.note for the 2022 computation caveat.
+import annualBudgetHistoryData from './annual-budget-history.json';
+
+export const annualBudgetHistory = {
+  years: annualBudgetHistoryData.data,
+  source: annualBudgetHistoryData.metadata.source,
+  sourceUrl: annualBudgetHistoryData.metadata.sourceUrl,
+  note: annualBudgetHistoryData.metadata.note,
+};
+
 export const officialDocuments = [
   {
     label: 'FY2026 Annual Budget Report',
@@ -43,73 +55,32 @@ export const officialDocuments = [
   },
 ];
 
-// 6 of 19 total flood-control/drainage projects are individually itemized
-// with sourced costs; the remaining 14 are not yet itemized in available
-// reporting. totalCost/totalProjects reflect the reported aggregate for
-// all 19, not just the ones listed here.
-interface DpwhProject {
-  name: string;
-  location: string;
-  category: string;
-  cost: number | null;
-  status?: string;
-  contractor?: string;
-}
+// Sourced from DPWH's own project database (api.dpwh.bettergov.ph), filtered
+// to projects explicitly located in Puerto Princesa City — see
+// dpwh-projects.json's metadata.note for the exact filtering logic. Only the
+// 5 highest-cost projects per category are itemized; category totals/counts
+// cover every matching project, including unawarded ones still in
+// procurement.
+import dpwhProjectsData from './dpwh-projects.json';
 
-export const dpwhProjects: {
+export const dpwhProjects = {
   summary: {
-    totalProjects: number;
-    totalCost: number;
-    implementingAgency: string;
-  };
-  source: string;
-  projects: DpwhProject[];
-} = {
-  summary: {
-    totalProjects: 19,
-    totalCost: 885_300_000,
-    implementingAgency: 'DPWH Palawan 3rd District Engineering Office',
+    totalProjects: dpwhProjectsData.totalProjects,
+    totalBudget: dpwhProjectsData.totalBudget,
+    asOf: dpwhProjectsData.metadata.asOf,
+    note: dpwhProjectsData.metadata.note,
   },
-  source:
-    'sumbongsapangulo.ph public flood-control tracker, via Palawan Daily News',
-  projects: [
-    {
-      name: 'Construction of Riverbank Protection Structure, Irawan River (Downstream)',
-      location: 'Barangay Irawan',
-      category: 'Flood Control and Drainage',
-      cost: 212_200_000,
-    },
-    {
-      name: 'Construction of Riverbank Protection Structure, Irawan River (Upstream)',
-      location: 'Barangay Irawan',
-      category: 'Flood Control and Drainage',
-      cost: 194_900_000,
-    },
-    {
-      name: 'River Waterway Enhancement Structure, Irawan River (Downstream, Left Side)',
-      location: 'Barangay Irawan',
-      category: 'Flood Control and Drainage',
-      cost: 17_300_000,
-    },
-    {
-      name: 'River Waterway Enhancement Structure, Irawan River (Downstream, Right Side)',
-      location: 'Barangay Irawan',
-      category: 'Flood Control and Drainage',
-      cost: 17_300_000,
-    },
-    {
-      name: 'River Waterway Enhancement Structure, Irawan River (Upstream)',
-      location: 'Barangay Irawan',
-      category: 'Flood Control and Drainage',
-      cost: 17_300_000,
-    },
-    {
-      name: 'Construction of DPWH Palawan 3rd DEO Annex Building',
-      location: 'Puerto Princesa City',
-      category: 'Building Construction / Civil Works',
-      cost: null,
-      status: '100% complete',
-      contractor: 'T.N. Ramos Construction & Development Corp.',
-    },
-  ],
+  categories: dpwhProjectsData.categories,
+  source: dpwhProjectsData.metadata.source,
+  sourceUrl: dpwhProjectsData.metadata.sourceUrl,
+  browseAllUrl: dpwhProjectsData.metadata.browseAllUrl,
+  browseFloodControlUrl: dpwhProjectsData.metadata.browseFloodControlUrl,
+  projects: dpwhProjectsData.projects,
+  // 2016-2025 budget per category, summed across ALL matching projects that
+  // year (not just the 5 itemized above). 2026 is omitted — its projects are
+  // still at the procurement stage with no awarded budget yet.
+  byYear: dpwhProjectsData.byYear as Record<
+    string,
+    { year: number; totalBudget: number }[]
+  >,
 };
