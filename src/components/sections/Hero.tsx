@@ -20,7 +20,11 @@ export default function Hero() {
                 alt=""
                 className="h-full w-auto"
               />
-              <div className="absolute right-full top-1/2 mr-3 w-36 -translate-y-1/2 rounded-lg bg-white px-3 py-2 text-xs font-medium text-gray-900 shadow-lg transition-transform group-hover:-translate-x-1">
+              <div
+                role="tooltip"
+                aria-hidden="true"
+                className="pointer-events-none absolute right-full top-1/2 mr-3 w-36 -translate-y-1/2 rounded-lg bg-white px-3 py-2 text-xs font-medium text-gray-900 opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+              >
                 {t('landmark.calloutText')}
                 <span
                   className="absolute left-full top-1/2 h-0 w-0 -translate-y-1/2 border-y-8 border-l-8 border-y-transparent border-l-white"
