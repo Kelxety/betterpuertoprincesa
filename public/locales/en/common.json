@@ -43,12 +43,10 @@
     "cmciYear": "CMCI",
     "score": "Score",
     "source": "Source",
-    "fiscalTitle": "Fiscal Transparency",
-    "annualBudget": "Annual Budget",
-    "balancedBudgetNote": "Total income = total expenditure (balanced budget)",
+    "fiscalTitle": "Budget Transparency",
+    "fiscalTeaser": "See Puerto Princesa's full FY2026 budget breakdown, National Tax Allotment, and infrastructure spending.",
+    "viewTransparency": "View Budget Transparency",
     "barangaysHeading": "Barangays ({{count}})",
-    "infrastructureTitle": "Infrastructure Projects",
-    "infrastructureDescription": "{{count}} flood control and drainage projects (₱{{cost}} total), implemented by the {{agency}}. Only the largest projects are itemized below; the rest aren't individually broken out in available reporting.",
     "tableProject": "Project",
     "tableLocation": "Location",
     "tableCost": "Cost",
@@ -56,6 +54,24 @@
     "contractorLabel": "Contractor",
     "ongoingUnspecified": "Ongoing/unspecified",
     "viewFullProfile": "View Full Profile"
+  },
+  "transparency": {
+    "title": "Budget Transparency",
+    "subtitle": "Puerto Princesa City's official budget, National Tax Allotment, and infrastructure spending — sourced directly from the City Government's Full Disclosure documents.",
+    "budgetTitle": "FY{{year}} City Budget",
+    "totalAppropriations": "Total Appropriations",
+    "currentOperating": "Current Operating Expenditures",
+    "capitalOutlay": "Capital Outlay",
+    "sectorTitle": "Appropriations by Sector",
+    "ntaTitle": "National Tax Allotment (NTA)",
+    "ntaNote": "Estimated from the mandatory 20% Development Fund set-aside, since the city's budget workbook itemizes the set-aside but not the gross NTA figure.",
+    "ldrrmfNote": "{{percent}}% of NTA, set aside for disaster risk reduction and management.",
+    "infrastructureTitle": "Infrastructure Projects",
+    "infrastructureDescription": "{{count}} flood control and drainage projects (₱{{cost}} total), implemented by the {{agency}}. Only the largest projects are itemized below; the rest aren't individually broken out in available reporting.",
+    "documentsTitle": "Official Source Documents",
+    "documentsSubtitle": "Primary documents published by the City Government of Puerto Princesa's Full Disclosure Board.",
+    "disclaimerTitle": "About This Data",
+    "disclaimerBody": "Figures on this page are sourced directly from Puerto Princesa's official budget documents and are updated periodically, not in real time. Some figures (like the National Tax Allotment total) are derived from other stated figures where the source document doesn't state them outright — see the notes next to each figure for details."
   },
   "glance": {
     "title": "Puerto Princesa at a Glance"
@@ -90,6 +106,7 @@
     "hotlines": "Hotlines",
     "holidays": "Holidays",
     "statistics": "Statistics",
+    "transparency": "Transparency",
     "news": "News"
   }
 }
