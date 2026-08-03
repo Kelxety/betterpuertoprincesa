@@ -1,3 +1,9 @@
+# [1.0.0-develop.2](https://github.com/hmcldryl/betterpuertoprincesa/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2026-08-03)
+
+### Bug Fixes
+
+- **navbar:** make mobile links without submenus navigate ([8021e64](https://github.com/hmcldryl/betterpuertoprincesa/commit/8021e6431d78286b05b30b524c824afe8b57445f))
+
 # 1.0.0-develop.1 (2026-08-03)
 
 ### Bug Fixes
