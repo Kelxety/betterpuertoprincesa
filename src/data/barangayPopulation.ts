@@ -1,0 +1,85 @@
+// 2020 Philippine Statistics Authority Census of Population, per barangay.
+// Republished by PhilAtlas (philatlas.com/luzon/mimaropa/puerto-princesa.html),
+// which itself sources PSA's barangay-level 2020 census figures. These 66
+// figures sum to exactly 307,079 — the city-wide total already cited on the
+// Statistics page — so treat this as verified, not approximate.
+import { normalizeBarangayName } from '../lib/barangayNames';
+
+const RAW_POPULATION_2020: Record<string, number> = {
+  Babuyan: 2927,
+  Bacungan: 5969,
+  'Bagong Bayan': 788,
+  'Bagong Pag-asa': 730,
+  'Bagong Sikat': 7035,
+  'Bagong Silang': 4223,
+  Bahile: 2667,
+  'Bancao-bancao': 15781,
+  'Barangay ng mga Mangingisda': 7988,
+  Binduyan: 1519,
+  Buenavista: 1496,
+  Cabayugan: 3754,
+  Concepcion: 1755,
+  Inagawan: 1758,
+  'Inagawan Sub-Colony': 5179,
+  Irawan: 8784,
+  Iwahig: 5422,
+  Kalipay: 500,
+  Kamuning: 2067,
+  Langogan: 2616,
+  Liwanag: 1273,
+  Lucbuan: 1774,
+  Luzviminda: 3636,
+  Mabuhay: 254,
+  Macarascas: 1715,
+  Magkakaibigan: 301,
+  Maligaya: 272,
+  Manalo: 2792,
+  Mandaragat: 10248,
+  Manggahan: 569,
+  Maningning: 892,
+  Maoyon: 1444,
+  Marufinas: 737,
+  Maruyogon: 1868,
+  Masigla: 585,
+  Masikap: 968,
+  Masipag: 2154,
+  Matahimik: 1233,
+  Matiyaga: 424,
+  Maunlad: 4369,
+  Milagrosa: 3100,
+  Model: 347,
+  Montible: 655,
+  Napsan: 3064,
+  'New Panggangan': 710,
+  Pagkakaisa: 1178,
+  Princesa: 1003,
+  Salvacion: 1506,
+  'San Jose': 23804,
+  'San Manuel': 18509,
+  'San Miguel': 21157,
+  'San Pedro': 25909,
+  'San Rafael': 2065,
+  'Santa Cruz': 1091,
+  'Santa Lourdes': 8186,
+  'Santa Lucia': 422,
+  'Santa Monica': 21174,
+  Seaside: 348,
+  Sicsican: 22625,
+  Simpocan: 1247,
+  Tagabinit: 1630,
+  Tagburos: 9824,
+  Tagumpay: 782,
+  Tanabag: 771,
+  Tanglaw: 1941,
+  Tiniguiban: 13565,
+};
+
+// Keyed by normalized name so lookups work regardless of which naming
+// convention (plain vs. PSGC "(Pob.)"-suffixed) the caller has on hand.
+export const barangayPopulation2020: Record<string, number> =
+  Object.fromEntries(
+    Object.entries(RAW_POPULATION_2020).map(([name, population]) => [
+      normalizeBarangayName(name),
+      population,
+    ])
+  );
