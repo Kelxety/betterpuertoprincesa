@@ -1,3 +1,9 @@
+# [1.0.0-develop.3](https://github.com/hmcldryl/betterpuertoprincesa/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2026-08-05)
+
+### Features
+
+- **statistics:** add interactive barangay boundary map ([6a6131c](https://github.com/hmcldryl/betterpuertoprincesa/commit/6a6131ce8eeb96b0fde09167100842f1e2deb81d))
+
 # [1.0.0-develop.2](https://github.com/hmcldryl/betterpuertoprincesa/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2026-08-03)
 
 ### Bug Fixes
