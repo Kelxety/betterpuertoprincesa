@@ -123,6 +123,14 @@
   padding-inline: 1.5rem;
 }
 
+/* Leaflet draws a default browser focus rectangle around SVG paths when
+   clicked (a keyboard-accessibility affordance) — suppress it since our own
+   selected/hover fill styles already communicate state. */
+.leaflet-interactive:focus,
+.leaflet-interactive:focus-visible {
+  outline: none;
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { demographics } from '../../data/statistics';
+import BarangayMap from '../map/BarangayMap';
 
 const numberFormat = new Intl.NumberFormat('en-US');
 
@@ -16,6 +17,7 @@ export default function AtAGlanceSection() {
       value: numberFormat.format(demographics.population.total),
       label: t('statistics.populationLabel'),
       source: `${demographics.population.year} ${demographics.population.source}`,
+      sourceUrl: demographics.population.sourceUrl,
     },
     {
       icon: MapPin,
@@ -68,7 +70,20 @@ export default function AtAGlanceSection() {
             <div className="text-sm font-medium text-gray-700 mt-1">
               {stat.label}
             </div>
-            <div className="text-xs text-gray-500 mt-1">{stat.source}</div>
+            <div className="text-xs text-gray-500 mt-1">
+              {stat.sourceUrl ? (
+                <a
+                  href={stat.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-primary-600"
+                >
+                  {stat.source}
+                </a>
+              ) : (
+                stat.source
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -80,6 +95,16 @@ export default function AtAGlanceSection() {
         {t('statistics.viewFullProfile')}
         <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
       </Link>
+
+      <div className="mt-10">
+        <Heading level={3} className="!mb-1">
+          {t('statistics.barangayMapHeading')}
+        </Heading>
+        <p className="text-sm text-gray-500 mb-4">
+          {t('statistics.barangayMapSubtitle')}
+        </p>
+        <BarangayMap />
+      </div>
     </Section>
   );
 }

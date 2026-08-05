@@ -6,6 +6,7 @@ import {
   TrendingUp,
   Landmark,
 } from 'lucide-react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -13,12 +14,17 @@ import Section from '../components/ui/Section';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
+import BarangayMap, {
+  type BarangayMapHandle,
+} from '../components/map/BarangayMap';
 import { demographics, competitiveIndex } from '../data/statistics';
 
 const numberFormat = new Intl.NumberFormat('en-US');
 
 const Statistics: React.FC = () => {
   const { t } = useTranslation('common');
+  const [hoveredBarangay, setHoveredBarangay] = useState<string | null>(null);
+  const mapRef = useRef<BarangayMapHandle>(null);
 
   const metrics = [
     {
@@ -26,6 +32,7 @@ const Statistics: React.FC = () => {
       value: numberFormat.format(demographics.population.total),
       label: t('statistics.populationLabel'),
       source: `${demographics.population.year} ${demographics.population.source}`,
+      sourceUrl: demographics.population.sourceUrl,
     },
     {
       icon: MapPin,
@@ -90,7 +97,20 @@ const Statistics: React.FC = () => {
                 <div className="text-sm font-medium text-gray-700 mt-1">
                   {m.label}
                 </div>
-                <div className="text-xs text-gray-500 mt-1">{m.source}</div>
+                <div className="text-xs text-gray-500 mt-1">
+                  {m.sourceUrl ? (
+                    <a
+                      href={m.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-primary-600"
+                    >
+                      {m.source}
+                    </a>
+                  ) : (
+                    m.source
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -156,14 +176,22 @@ const Statistics: React.FC = () => {
               count: demographics.barangayCount,
             })}
           </Heading>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          <Text className="!max-w-2xl !mb-6">
+            {t('statistics.barangayMapSubtitle')}
+          </Text>
+          <BarangayMap ref={mapRef} highlightedName={hoveredBarangay} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mt-8">
             {demographics.barangays.map(b => (
-              <div
+              <button
                 key={b}
-                className="text-sm text-gray-700 bg-white border border-gray-200 rounded px-3 py-2"
+                type="button"
+                onMouseEnter={() => setHoveredBarangay(b)}
+                onMouseLeave={() => setHoveredBarangay(null)}
+                onClick={() => mapRef.current?.focusByName(b)}
+                className="text-sm text-left text-gray-700 bg-white border border-gray-200 rounded px-3 py-2 cursor-pointer hover:border-primary-400 hover:bg-primary-50 transition-colors outline-none focus:outline-none focus-visible:outline-none"
               >
                 {b}
-              </div>
+              </button>
             ))}
           </div>
         </Section>
