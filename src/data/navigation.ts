@@ -33,6 +33,7 @@ export const mainNavigation: NavigationItem[] = [
   { label: 'Statistics', href: '/statistics' },
   { label: 'Transparency', href: '/transparency' },
   { label: 'News', href: '/news' },
+  { label: 'Mining Watch', href: '/mining-watch' },
 ];
 
 export const footerNavigation = {
@@ -60,6 +61,7 @@ export const footerNavigation = {
         { label: 'City Statistics', href: '/statistics' },
         { label: 'Budget Transparency', href: '/transparency' },
         { label: 'News & Updates', href: '/news' },
+        { label: 'Mining Watch', href: '/mining-watch' },
       ],
     },
     {

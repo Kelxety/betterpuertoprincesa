@@ -10,6 +10,20 @@
     "triviaHeading": "Did You Know?",
     "sourcesHeading": "Sources"
   },
+  "miningWatch": {
+    "title": "Mining Watch",
+    "subtitle": "Tracking how mining is affecting Palawan's environment, communities, and Indigenous peoples.",
+    "disclaimer": "This page is compiled from independent journalism and human-rights/environmental organizations for public awareness. It is not an official statement or position of the City Government of Puerto Princesa.",
+    "contextHeading": "Why This Matters",
+    "mapHeading": "Where Mining Is Happening",
+    "mapCaveat": "Pins mark known mining sites at the barangay/municipality level, sourced from official MGB records and cited news reporting below — they are approximate locations, not surveyed concession boundaries. Tap a pin for details and sources.",
+    "forestLossHeading": "Tree Cover Loss by Dominant Driver",
+    "forestLossSubtitle": "What's actually clearing forest across Palawan province, 2001–2025, by dominant cause — from permanent conversion (agriculture, mining, settlements) to temporary disturbances (logging, fire) that can eventually regrow.",
+    "forestLossMiningNote": "\"Hard commodities\" — mining and energy infrastructure — clears the least total area of any driver province-wide: about 1,257 hectares of roughly 224,000 lost since 2001, behind even permanent agriculture and shifting cultivation, which dominate by a wide margin. That number likely understates mining's real footprint: the 11 companies now operating in Palawan hold roughly 29,430 hectares in concessions, most not yet actively cleared, and mining roads open remote forest to logging and farming by others — clearing this chart attributes to those drivers instead, not to mining. Hectares aside, mining also targets old-growth primary forest and protected ancestral domains specifically (Mt. Mantalingahan, Bataraza, Brooke's Point — see the map above), and its damage reaches beyond the cleared footprint through water pollution, like the hexavalent chromium contamination documented near Rio Tuba below.",
+    "forestLossSourceLabel": "Source",
+    "articlesHeading": "In the News",
+    "footerNote": "Every article below links to its original, independently published source. If you spot an outdated or broken link, please open an issue on this project's GitHub repository."
+  },
   "services": {
     "title": "Services & Information",
     "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
@@ -52,10 +66,10 @@
     "searchBarangayPlaceholder": "Search barangay...",
     "selectedBarangay": "Barangay",
     "mapHint": "Click any barangay on the map to select it.",
-    "barangayPopulation": "Pop. {{population}} (2020 Census)",
+    "barangayPopulation": "Pop. {{population}} (2024 Census)",
     "mapSourcesLabel": "Sources",
     "mapSourceBoundaries": "Barangay boundaries (NAMRIA/PSGC)",
-    "mapSourcePopulation": "Barangay population, 2020 Census (PhilAtlas)",
+    "mapSourcePopulation": "Barangay population, 2024 Census (PSA)",
     "tableProject": "Project",
     "tableLocation": "Location",
     "tableCost": "Cost",
@@ -125,6 +139,7 @@
     "holidays": "Holidays",
     "statistics": "Statistics",
     "transparency": "Transparency",
-    "news": "News"
+    "news": "News",
+    "miningwatch": "Mining Watch"
   }
 }

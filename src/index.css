@@ -131,6 +131,14 @@
   outline: none;
 }
 
+/* Global Forest Watch's tree-cover-loss tiles render in a bright
+   magenta/red that reads as an alarm color and clashes with the red
+   mining-site pins on the same map — shift it toward an orange/brown
+   "scorched earth" tone instead. */
+.forest-loss-tiles {
+  filter: sepia(1) saturate(3.5) brightness(1.15) hue-rotate(-15deg);
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

@@ -12,6 +12,7 @@ import Statistics from './pages/Statistics';
 import Transparency from './pages/Transparency';
 import News from './pages/News';
 import PrinsesaNgBaybay from './pages/PrinsesaNgBaybay';
+import MiningWatch from './pages/MiningWatch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                 path="/prinsesa-ng-baybay"
                 element={<PrinsesaNgBaybay />}
               />
+              <Route path="/mining-watch" element={<MiningWatch />} />
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>
