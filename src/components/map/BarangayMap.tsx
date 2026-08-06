@@ -23,7 +23,7 @@ import { Search, MapPin, Users } from 'lucide-react';
 // Puerto Princesa City (ADM3_PCODE PH1705316), 66 features:
 // https://github.com/bendlikeabamboo/barangay-boundaries-repository
 import barangayBoundaries from '../../data/geo/puerto-princesa-barangays.json';
-import { barangayPopulation2020 } from '../../data/barangayPopulation';
+import { barangayPopulation2024 } from '../../data/barangayPopulation';
 import { normalizeBarangayName } from '../../lib/barangayNames';
 
 const numberFormat = new Intl.NumberFormat('en-US');
@@ -162,7 +162,7 @@ const BarangayMap = forwardRef<BarangayMapHandle, BarangayMapProps>(
         )?.properties.name ?? highlightedName)
       : selected;
     const activePopulation = activeName
-      ? barangayPopulation2020[normalizeBarangayName(activeName)]
+      ? barangayPopulation2024[normalizeBarangayName(activeName)]
       : undefined;
 
     function focusBarangay(feature: Feature<Geometry, BarangayProperties>) {
@@ -244,7 +244,7 @@ const BarangayMap = forwardRef<BarangayMapHandle, BarangayMapProps>(
                 layer: Layer
               ) => {
                 const population =
-                  barangayPopulation2020[
+                  barangayPopulation2024[
                     normalizeBarangayName(feature.properties.name)
                   ];
                 layer.bindTooltip(
@@ -306,7 +306,7 @@ const BarangayMap = forwardRef<BarangayMapHandle, BarangayMapProps>(
           </a>
           {', '}
           <a
-            href="https://www.philatlas.com/luzon/mimaropa/puerto-princesa.html"
+            href="https://psa.gov.ph/classification/psgc/barangays/1731500000"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-primary-600"

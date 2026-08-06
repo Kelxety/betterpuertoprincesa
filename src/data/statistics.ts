@@ -7,9 +7,10 @@
 // released 26 Dec 2025, declared official via Proclamation No. 973 dated
 // 11 July 2025):
 // https://rssomimaropa.psa.gov.ph/content/official-population-count-city-puerto-princesa-2024-census-population
-// Per-barangay figures (src/data/barangayPopulation.ts) remain the 2020
-// Census — PSA has only published a full 66-barangay breakdown at the 2020
-// level; the 2024 release itemizes only the 10 most populous barangays.
+// Per-barangay figures (src/data/barangayPopulation.ts) are also 2024 —
+// PSA's special release itemizes only the 10 most populous barangays, but
+// the full 66-barangay breakdown is published in PSA's own PSGC registry:
+// https://psa.gov.ph/classification/psgc/barangays/1731500000
 export const demographics = {
   city: 'Puerto Princesa',
   province: 'Palawan',
