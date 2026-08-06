@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/hmcldryl/betterpuertoprincesa/compare/v1.0.0...v1.1.0) (2026-08-06)
+
+### Bug Fixes
+
+- **navbar:** make mobile links without submenus navigate ([8021e64](https://github.com/hmcldryl/betterpuertoprincesa/commit/8021e6431d78286b05b30b524c824afe8b57445f))
+
+### Features
+
+- **statistics:** add interactive barangay boundary map ([6a6131c](https://github.com/hmcldryl/betterpuertoprincesa/commit/6a6131ce8eeb96b0fde09167100842f1e2deb81d))
+
 # [1.1.0-develop.1](https://github.com/hmcldryl/betterpuertoprincesa/compare/v1.0.0...v1.1.0-develop.1) (2026-08-06)
 
 ### Bug Fixes
